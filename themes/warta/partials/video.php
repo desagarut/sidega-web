@@ -1,0 +1,106 @@
+        <!-- Start Video Area -->
+        <!--<div class="youtube-area video-padding d-none d-sm-block">-->
+        <div class="youtube-area video-padding d-sm-block">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="video-items-active">
+                            <div class="video-items text-center">
+                                <video controls>
+                                    <source src="<?= base_url("$this->theme_folder/$this->theme/assets/video/news2.mp4") ?>" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="video-items text-center">
+                                <video controls>
+                                    <source src="<?= base_url("$this->theme_folder/$this->theme/assets/video/news1.mp4") ?>" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="video-items text-center">
+                                <video controls>
+                                    <source src="<?= base_url("$this->theme_folder/$this->theme/assets/video/news3.mp4") ?>" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="video-items text-center">
+                                <video controls>
+                                    <source src="<?= base_url("$this->theme_folder/$this->theme/assets/video/news1.mp4") ?>" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="video-items text-center">
+                                <video controls>
+                                    <source src="<?= base_url("$this->theme_folder/$this->theme/assets/video/news3.mp4") ?>" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="testmonial-nav text-center">
+                                <?php foreach ($gallery as $data) : ?>
+                                    <?php if ($data['link']) : ?>
+                                        <div class="single-video" style="padding:10px 10px 10px 10px">
+                                        <iframe height="200px" width="100%" class="embed-responsive-item" src="https://www.youtube.com/embed/<?= $data["link"]; ?>" title="<?= $data['nama'] ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <!--<video controls>
+                                                <source src="<?= base_url("$this->theme_folder/$this->theme/assets/video/news2.mp4") ?>" type="video/mp4">
+                                                
+                                                Your browser does not support the video tag.
+                                            </video>-->
+                                            <div class="video-intro">
+                                                <h4><?= $data['nama'] ?></h4>
+                                            </div>
+                                        </div>
+                                    <?php endif; ?>
+                                <?php endforeach; ?>
+
+<!--
+                                <div class="single-video">
+                                    <video controls>
+                                        <source src="<?= base_url("$this->theme_folder/$this->theme/assets/video/news1.mp4") ?>" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <div class="video-intro">
+                                        <h4>Banglades News Video </h4>
+                                    </div>
+                                </div>
+                                <div class="single-video">
+                                    <video controls>
+                                        <source src="<?= base_url("$this->theme_folder/$this->theme/assets/video/news3.mp4") ?>" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <div class="video-intro">
+                                        <h4>Latest Video - 2020 </h4>
+                                    </div>
+                                </div>
+                                <div class="single-video">
+                                    <video controls>
+                                        <source src="<?= base_url("$this->theme_folder/$this->theme/assets/video/news1.mp4") ?>" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <div class="video-intro">
+                                        <h4>Spondon News -2019 </h4>
+                                    </div>
+                                </div>
+                                <div class="single-video">
+                                    <video controls>
+                                        <source src="<?= base_url("$this->theme_folder/$this->theme/assets/video/news3.mp4") ?>" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <div class="video-intro">
+                                        <h4>Latest Video - 2020</h4>
+                                    </div>
+                                </div>
+                                                -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Start Video area-->
