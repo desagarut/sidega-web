@@ -152,14 +152,14 @@
 										<form id="paging" action="<?= site_url("gallery_youtube/sub_gallery/$gallery") ?>" method="post" class="form-horizontal">
 											<label>
 												<div class="row">
-													<div class="col-sm-4">
+													<div class="col-sm-5">
 														<select name="per_page" class="form-control input-sm" onchange="$('#paging').submit()">
 															<option value="20" <?php selected($per_page, 20); ?>>20</option>
 															<option value="50" <?php selected($per_page, 50); ?>>50</option>
 															<option value="100" <?php selected($per_page, 100); ?>>100</option>
 														</select>
 													</div>
-													<div class="col-sm-8">
+													<div class="col-sm-7">
 														Dari&nbsp;<strong><?= $paging->num_rows ?></strong>&nbsp;Total Data
 													</div>
 												</div>
