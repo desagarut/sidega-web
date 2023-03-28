@@ -1,32 +1,62 @@
-<?php  if(!defined('BASEPATH')) exit('No direct script access allowed'); ?>
-
-<script src="https://cdn.jsdelivr.net/gh/somanchiu/Keyless-Google-Maps-API@v5.7/mapsJavaScriptAPI.js" async defer></script>
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOKTzsvtw8j-TJI8dmJ228bXASq4C-S7U&callback=initMap&v=weekly" defer></script>
 
 <script>
-<?php if (!empty($wil_ini['lat'] && !empty($wil_ini['lng']))): ?>
-	var center = { lat: <?= $wil_ini['lat'].", lng: ".$wil_ini['lng']; ?> };
-<?php else: ?>
-	var center = { lat: <?=$desa['lat'].", lng: ".$desa['lng']?> };
-<?php endif; ?>
+  var map
+  var kantorDesa
 
-function initMap() {
-	var myLatlng = new google.maps.LatLng(center.lat, center.lng);
-	var mapOptions = { zoom: 17, center, mapTypeId:google.maps.MapTypeId.HYBRID }
-	var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+  function initMap() {
+    <?php if (!empty($desa['lat']) && !empty($desa['lng'])) : ?>
+      var center = {
+        lat: <?= $desa['lat'] ?>,
+        lng: <?= $desa['lng'] ?>
+      }
+    <?php else : ?>
+      var center = {
+        lat: -7.34298008144879,
+        lng: 107.217667252986,
+      }
+    <?php endif; ?>
 
-	// Place a draggable marker on the map
-	var marker = new google.maps.Marker({
-			position: myLatlng,
-			map: map,
-			draggable: false,
-			title: "Kantor <?=ucwords($this->setting->sebutan_kecamatan).' '.$kecamatan['nama_kecamatan']?>"
-	});
+    var zoom = 13
+    //Jika posisi kantor desa belum ada, maka posisi peta akan menampilkan seluruh Indonesia
+    map = new google.maps.Map(document.getElementById("map-wilayah-desa"), {
+      center,
+      zoom: <?= $desa['zoom'] ?>,
+      mapTypeId: google.maps.MapTypeId.<?= $desa['map_tipe'] ?>
+    });
 
-	marker.addListener('dragend', (e) => {
-		document.getElementById('lat').value = e.latLng.lat();
-		document.getElementById('lng').value = e.latLng.lng();
-	})
-}
+    kantorDesa = new google.maps.Marker({
+      position: center,
+      map: map,
+      title: 'Kantor <?php echo ucwords($this->setting->sebutan_desa) . " " ?><?php echo ucwords($desa['nama_desa']) ?>',
+      animation: google.maps.Animation.BOUNCE
+    });
+
+    <?php if (!empty($desa['path'])) : ?>
+      let polygon_desa = <?= $desa['path']; ?>;
+
+      polygon_desa[0].map((arr, i) => {
+        polygon_desa[i] = {
+          lat: arr[0],
+          lng: arr[1]
+        }
+      })
+
+      //Style polygon
+      var batasWilayah = new google.maps.Polygon({
+        paths: polygon_desa,
+        strokeColor: '#c31b68',
+        strokeOpacity: 0.9,
+        strokeWeight: 3,
+        fillColor: '#fd7e14',
+        fillOpacity: 0.25
+      });
+
+      batasWilayah.setMap(map)
+    <?php endif; ?>
+  }
 </script>
 <style>
   #map

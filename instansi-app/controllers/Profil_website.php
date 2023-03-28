@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Identitas_instansi extends Admin_Controller {
+class Profil_website extends Admin_Controller {
 
 	public function __construct()
 	{
@@ -23,7 +23,7 @@ class Identitas_instansi extends Admin_Controller {
 		$data['wil_atas'] = $data_desa;
 		$data['wil_atas']['zoom'] = 14;
 
-		$this->render('identitas_instansi/index', $data);
+		$this->render('profil_website/index', $data);
 	}
 
 	public function form()
@@ -36,23 +36,23 @@ class Identitas_instansi extends Admin_Controller {
 
 		// Buat row data desa di form apabila belum ada data desa
 		if ($data['main'])
-			$data['form_action'] = site_url('identitas_instansi/update/' . $data['main']['id']);
+			$data['form_action'] = site_url('profil_website/update/' . $data['main']['id']);
 		else
-			$data['form_action'] = site_url('identitas_instansi/insert');
+			$data['form_action'] = site_url('profil_website/insert');
 
-		$this->render('identitas_instansi/form', $data);
+		$this->render('profil_website/form', $data);
 	}
 
 	public function insert()
 	{
 		$this->config_model->insert();
-		redirect('identitas_instansi');
+		redirect('profil_website');
 	}
 
 	public function update($id = 0)
 	{
 		$this->config_model->update($id);
-		redirect('identitas_instansi');
+		redirect('profil_website');
 	}
 
 	public function maps($tipe = 'kantor')
@@ -70,10 +70,10 @@ class Identitas_instansi extends Admin_Controller {
 		$data['nama_wilayah'] = ucwords($this->setting->sebutan_desa . " " . $data_desa['nama_desa']);
 		$data['wilayah'] = ucwords($this->setting->sebutan_desa . " " . $data_desa['nama_desa']);
 		$data['breadcrumb'] = array(
-			array('link' => site_url("identitas_instansi"), 'judul' => "Identitas " . ucwords($this->setting->sebutan_desa)),
+			array('link' => site_url("profil_website"), 'judul' => "Identitas " . ucwords($this->setting->sebutan_desa)),
 		);
 
-		$data['form_action'] = site_url("identitas_instansi/update_maps/$tipe");
+		$data['form_action'] = site_url("profil_website/update_maps/$tipe");
 
 		//$this->render('sid/wilayah/maps_' . $tipe, $data);
 		$this->render('sid/wilayah/maps_google_' . $tipe, $data);
@@ -94,10 +94,10 @@ class Identitas_instansi extends Admin_Controller {
 		$data['nama_wilayah'] = ucwords($this->setting->sebutan_desa . " " . $data_desa['nama_desa']);
 		$data['wilayah'] = ucwords($this->setting->sebutan_desa . " " . $data_desa['nama_desa']);
 		$data['breadcrumb'] = array(
-			array('link' => site_url("identitas_instansi"), 'judul' => "Identitas " . ucwords($this->setting->sebutan_desa)),
+			array('link' => site_url("profil_website"), 'judul' => "Identitas " . ucwords($this->setting->sebutan_desa)),
 		);
 
-		$data['form_action'] = site_url("identitas_instansi/update_maps/$tipe");
+		$data['form_action'] = site_url("profil_website/update_maps/$tipe");
 
 		//$this->render('sid/wilayah/maps_' . $tipe, $data);
 		$this->render('sid/wilayah/maps_openstreet_' . $tipe, $data);
@@ -110,6 +110,6 @@ class Identitas_instansi extends Admin_Controller {
 		else
 			$this->config_model->update_wilayah();
 
-		redirect("identitas_instansi");
+		redirect("profil_website");
 	}
 }

@@ -696,7 +696,7 @@ class User_model extends CI_Model {
 				'beranda' => array('b','u','h'),
 
 				// info desa
-				'identitas_instansi' => array('b','u'),
+				'profil_website' => array('b','u'),
 				'sid_core' => array('b','u'),
 				'pengurus' => array('b','u'),
 				'status_desa' => array('b','u'),
@@ -846,7 +846,7 @@ class User_model extends CI_Model {
 				'beranda' => array('b','u','h'),
 
 				// info desa
-				'identitas_instansi' => array('b','u','h'),
+				'profil_website' => array('b','u','h'),
 				'sid_core' => array('b','u','h'),
 				'pengurus' => array('b','u','h'),
 				'status_desa' => array('b','u','h'),
@@ -996,7 +996,7 @@ class User_model extends CI_Model {
 				'beranda' => array('b','u'),
 
 				// info desa
-				'identitas_instansi' => array('b','u'),
+				'profil_website' => array('b','u'),
 				'sid_core' => array('b','u'),
 				'pengurus' => array('b','u'),
 				'status_desa' => array('b','u'),
@@ -1145,7 +1145,7 @@ class User_model extends CI_Model {
 				'beranda' => array('b','u'),
 
 				// info desa
-				'identitas_instansi' => array('b','u'),
+				'profil_website' => array('b','u'),
 				'sid_core' => array('b','u'),
 				'pengurus' => array('b','u'),
 				'status_desa' => array('b','u'),
@@ -1291,7 +1291,7 @@ class User_model extends CI_Model {
 				'beranda' => array('b','u','h'),
 				
 				//Identitas Instansi
-				'identitas_instansi' => array('b','u','h'),
+				'profil_website' => array('b','u','h'),
 				'sid_core' => array('b','u','h'),
 				'pengurus' => array('b','u','h'),
 
@@ -1351,7 +1351,7 @@ class User_model extends CI_Model {
 				'beranda' => array('b','u','h'),
 				
 				//Identitas Instansi
-				'identitas_instansi' => array('b','u','h'),
+				'profil_website' => array('b','u','h'),
 				'sid_core' => array('b','u','h'),
 				'pengurus' => array('b','u','h'),
 

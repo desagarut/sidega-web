@@ -12,7 +12,7 @@
 				<div class="col-sm-6">
 					<ol class="breadcrumb float-sm-right">
 						<li class="breadcrumb-item"><a href="<?= site_url() ?>beranda">Beranda</a></li>
-						<li class="breadcrumb-item active"><a href="<?= site_url() ?>identitas_instansi">Identitas Instansi</a></li>
+						<li class="breadcrumb-item active"><a href="<?= site_url() ?>profil_website">Identitas Instansi</a></li>
 						<li class="breadcrumb-item active"><a href="#!">Form</a></li>
 					</ol>
 				</div>
@@ -64,7 +64,7 @@
 
 							<div class="card">
 								<div class="card-header text-right">
-									<a href="<?= site_url('identitas_instansi'); ?>" class="btn btn-info " title="Kembali Ke Data <?= $kecamatan; ?>"><i class='feather mr-2 icon-skip-back'></i> Kembali </a>
+									<a href="<?= site_url('profil_website'); ?>" class="btn btn-info " title="Kembali Ke Data <?= $kecamatan; ?>"><i class='feather mr-2 icon-skip-back'></i> Kembali </a>
 									<button type='reset' class='btn btn-danger'><i class='feather mr-2 icon-x'></i> Batal</button>
 									<button type='submit' class='btn btn-success'><i class='feather mr-2 icon-check'></i> Simpan</button>
 
@@ -73,13 +73,13 @@
 									<div class="form-group row">
 										<label class="col-sm-3 col-form-label" for="nama">Nama Instansi</label>
 										<div class="col-sm-9">
-											<input id="nama_instansi" name="nama_instansi" class="form-control input-sm nama_terbatas required" maxlength="50" type="text" placeholder="Nama Instansi" value="<?= $main["nama_instansi"]; ?>"></input>
+											<input id="nama_website" name="nama_website" class="form-control input-sm nama_terbatas required" maxlength="50" type="text" placeholder="Nama Instansi" value="<?= $main["nama_website"]; ?>"></input>
 										</div>
 									</div>
 									<div class="form-group row">
 										<label class="col-sm-3 col-form-label" for="kode_desa">Kode Instansi</label>
 										<div class="col-sm-2">
-											<input id="kode_instansi" name="kode_instansi" class="form-control input-sm bilangan required" minlength="6" maxlength="6" type="text" placeholder="Kode Instansi" value="<?= $main["kode_instansi"]; ?>"></input>
+											<input id="kode_website" name="kode_website" class="form-control input-sm bilangan required" minlength="6" maxlength="6" type="text" placeholder="Kode Instansi" value="<?= $main["kode_website"]; ?>"></input>
 										</div>
 									</div>
 									<div class="form-group row">
@@ -107,15 +107,15 @@
 										</div>
 									</div>
 									<div class="form-group row">
-										<label class="col-sm-3 col-form-label" for="email_instansi">E-Mail</label>
+										<label class="col-sm-3 col-form-label" for="email_website">E-Mail</label>
 										<div class="col-sm-9">
-											<input id="email_instansi" name="email_instansi" class="form-control input-sm email" maxlength="50" type="text" placeholder="E-Mail " value="<?= $main["email_instansi"] ?>"></input>
+											<input id="email_website" name="email_website" class="form-control input-sm email" maxlength="50" type="text" placeholder="E-Mail " value="<?= $main["email_website"] ?>"></input>
 										</div>
 									</div>
 									<div class="form-group row">
 										<label class="col-sm-3 col-form-label" for="telepon">Telpon</label>
 										<div class="col-sm-9">
-											<input id="telepon_instansi" name="telepon_instansi" class="form-control input-sm bilangan" type="text" maxlength="15" placeholder="Telepon" value="<?= $main["telepon_instansi"]; ?>"></input>
+											<input id="telepon_website" name="telepon_website" class="form-control input-sm bilangan" type="text" maxlength="15" placeholder="Telepon" value="<?= $main["telepon_website"]; ?>"></input>
 										</div>
 									</div>
 									<div class="form-group row">

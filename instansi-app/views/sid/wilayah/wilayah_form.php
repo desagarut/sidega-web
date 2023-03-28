@@ -10,7 +10,7 @@
 				<div class="col-sm-6">
 					<ol class="breadcrumb float-sm-right">
 						<li class="breadcrumb-item"><a href="<?= site_url() ?>beranda">Beranda</a></li>
-						<li class="breadcrumb-item active"><a href="<?= site_url() ?>identitas_instansi">Identitas Instansi</a></li>
+						<li class="breadcrumb-item active"><a href="<?= site_url() ?>profil_website">Identitas Instansi</a></li>
 						<li class="breadcrumb-item active"><a href="<?= site_url('sid_core') ?>">wilayah Administratif</a></li>
 						<li class="breadcrumb-item active"><a href="#">Data <?= ucwords($this->setting->sebutan_desa) ?></a></li>
 					</ol>

@@ -118,16 +118,16 @@
 					</div>
 					<!--<div class="card-footer">
 								<?php if ($this->CI->cek_hak_akses('h')) : ?>
-								<a href="<?= site_url('identitas_instansi/form'); ?>" class="btn btn-warning" title="Ubah Data" ><i class="fa fa-edit"></i> Ubah Data
+								<a href="<?= site_url('profil_website/form'); ?>" class="btn btn-warning" title="Ubah Data" ><i class="fa fa-edit"></i> Ubah Data
 								<?= $desa; ?>
 								</a> 
-								<a href="<?= site_url('identitas_instansi/maps/kantor'); ?>" class="btn btn-box bg-purple btn-sm "><i class='fa fa-map-marker'></i> Lokasi Kantor <?= $desa; ?></a>
-								<a href="<?= site_url('identitas_instansi/maps/kantor'); ?>" class="btn btn-success " title="Ubah Lokasi Kantor Desa"><i class="feather mr-2 icon-map-pin"></i> Lokasi Kantor
+								<a href="<?= site_url('profil_website/maps/kantor'); ?>" class="btn btn-box bg-purple btn-sm "><i class='fa fa-map-marker'></i> Lokasi Kantor <?= $desa; ?></a>
+								<a href="<?= site_url('profil_website/maps/kantor'); ?>" class="btn btn-success " title="Ubah Lokasi Kantor Desa"><i class="feather mr-2 icon-map-pin"></i> Lokasi Kantor
 								<?= $desa; ?>
 								</a> 
-								<a href="<?= site_url('identitas_instansi/maps/wilayah'); ?>" class="btn btn-box btn-info btn-sm btn-sm "><i class='fa fa-map'></i> Peta Wilayah <?= $desa; ?></a>
-								<a href="<?= site_url('identitas_instansi/maps/wilayah'); ?>" class="btn btn-primary" title="Ubah Wilayah Desa"><i class="feather mr-2 icon-map"></i> Wilayah Desa | Google </a>
-								<a href="<?= site_url('identitas_instansi/maps_openstreet/wilayah'); ?>" class="btn btn-secondary" title="Ubah Wilayah Desa"><i class='feather mr-2 icon-map'></i> Wilayah Desa | OSM</a>
+								<a href="<?= site_url('profil_website/maps/wilayah'); ?>" class="btn btn-box btn-info btn-sm btn-sm "><i class='fa fa-map'></i> Peta Wilayah <?= $desa; ?></a>
+								<a href="<?= site_url('profil_website/maps/wilayah'); ?>" class="btn btn-primary" title="Ubah Wilayah Desa"><i class="feather mr-2 icon-map"></i> Wilayah Desa | Google </a>
+								<a href="<?= site_url('profil_website/maps_openstreet/wilayah'); ?>" class="btn btn-secondary" title="Ubah Wilayah Desa"><i class='feather mr-2 icon-map'></i> Wilayah Desa | OSM</a>
 								<?php endif; ?>
 
 							</div>-->

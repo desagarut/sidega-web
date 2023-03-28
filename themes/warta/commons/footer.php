@@ -14,8 +14,8 @@
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
                                         <p class="info1"><?= $desa['profil_singkat']; ?></p>
-                                        <p class="info2">Email: <?= $desa['email_instansi']; ?></p>
-                                        <p class="info2">Phone: <?= $desa['telepon_instansi']; ?></p>
+                                        <p class="info2">Email: <?= $desa['email_website']; ?></p>
+                                        <p class="info2">Phone: <?= $desa['telepon_website']; ?></p>
                                     </div>
                                 </div>
                             </div>
@@ -75,11 +75,11 @@
                     <div class="row d-flex align-items-center">
                         <div class="col-xl-12 ">
                             <div class="footer-copy-right text-center">
-                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                <p>
                                     Copyright &copy;<script>
                                         document.write(new Date().getFullYear());
                                     </script> | <?= $this->setting->website_title ?>
-                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                                    </p>
                             </div>
                         </div>
                     </div>

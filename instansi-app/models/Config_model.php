@@ -52,11 +52,11 @@ class Config_model extends CI_Model {
 		$data['old_kantor_kecamatan'] = $post['old_kantor_kecamatan'];
 		$data['kode_pos'] = bilangan($post['kode_pos']);
 		$data['alamat_instansi'] = alamat($post['alamat_instansi']);
-		$data['email_instansi'] = email($post['email_instansi']);
-		$data['telepon_instansi'] = bilangan($post['telepon_instansi']);
+		$data['email_website'] = email($post['email_website']);
+		$data['telepon_website'] = bilangan($post['telepon_website']);
 		$data['website_instansi'] = alamat_web($post['website_instansi']);
-		$data['nama_instansi'] = nama_terbatas($post['nama_instansi']);
-		$data['kode_instansi'] = bilangan($post['kode_instansi']);
+		$data['nama_website'] = nama_terbatas($post['nama_website']);
+		$data['kode_website'] = bilangan($post['kode_website']);
 		$data['nama_pimpinan'] = nama($post['nama_pimpinan']);
 		$data['nip_pimpinan'] = nomor_surat_keputusan($post['nip_pimpinan']);
 		$data['nama_kabupaten'] = nama($post['nama_kabupaten']);
@@ -144,7 +144,7 @@ class Config_model extends CI_Model {
 		{
 			$_SESSION['error_msg'] .= " -> Jenis file ini tidak diperbolehkan ";
 			$_SESSION['success'] = -1;
-			redirect('identitas_instansi');
+			redirect('profil_website');
 		}
 
 		$uploadData = NULL;

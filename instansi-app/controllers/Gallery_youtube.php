@@ -15,7 +15,7 @@ class Gallery_youtube extends Admin_Controller {
 	{
 		unset($_SESSION['cari']);
 		unset($_SESSION['filter']);
-		redirect('gallery');
+		redirect('gallery_youtube');
 	}
 
 	public function index($p=1, $o=0)
@@ -73,7 +73,7 @@ class Gallery_youtube extends Admin_Controller {
 		}
 		else
 		{
-			redirect('gallery');
+			redirect('gallery_youtube');
 		}
 	}
 

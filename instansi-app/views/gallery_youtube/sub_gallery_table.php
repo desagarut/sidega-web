@@ -8,20 +8,30 @@
 	});
 </script>
 <div class="content-wrapper">
-	<section class="content-header">
-		<h1>Daftar Gambar Album</h1>
-		<ol class="breadcrumb">
-			<li><a href="<?= site_url('beranda') ?>"><i class="fa fa-home"></i> Home</a></li>
-			<li><a href="<?= site_url('gallery_youtube') ?>"> Playlist</a></li>
-			<li class="active">Video List</li>
-		</ol>
-	</section>
+
+	<!-- Content Header (Page header) -->
+	<div class="content-header">
+		<div class="container-fluid">
+			<div class="row mb-2">
+				<div class="col-sm-6">
+					<h4 class="m-0">Gallery Youtube</h4>
+				</div>
+				<div class="col-sm-6">
+					<ol class="breadcrumb float-sm-right">
+						<li class="breadcrumb-item"><a href="<?= site_url() ?>beranda">Beranda</a></li>
+						<li class="breadcrumb-item active"><a href="#!">Gallery Youtube</a></li>
+						<li class="breadcrumb-item active"><a href="#!">Daftar Video</a></li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
 	<section class="content" id="maincontent">
 		<form id="mainform" name="mainform" action="" method="post">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="box box-info">
-						<div class="box-header with-border">
+					<div class="card card-default">
+						<div class="card-header with-border">
 							<a href="<?= site_url("gallery_youtube/form_sub_gallery/$gallery") ?>" class="btn btn-social btn-box btn-success btn-sm btn-sm visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block" title="Tambah Album">
 								<i class="fa fa-plus"></i> Add Video
 							</a>
@@ -32,10 +42,10 @@
 								<i class="fa fa-arrow-circle-left "></i>Back
 							</a>
 						</div>
-						<div class="box-header with-border">
-							<h3 class="box-title">Nama Playlist : <strong><?= $sub['nama'] ?></strong></h3>
+						<div class="card-header with-border">
+							<h3 class="card-title">Nama Playlist : <strong><?= $sub['nama'] ?></strong></h3>
 						</div>
-						<div class="box-body">
+						<div class="card-body">
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="dataTables_wrapper form-inline dt-bootstrap no-footer">
@@ -63,17 +73,17 @@
 												<div class="col-sm-12">
 													<div class="table-responsive">
 														<table class="table table-bordered table-striped dataTable table-hover">
-															<thead class="bg-gray disabled color-palette">
+															<thead class="disabled color-palette">
 																<tr>
 																	<th><input type="checkbox" id="checkall" /></th>
 																	<th>No</th>
 																	<th>Video Depan</th>
 																	<?php if ($o == 2) : ?>
-																		<th><a href="<?= site_url("gallery_youtube/sub_gallery/$gallery/$p/1") ?>">Nama Gambar <i class='fa fa-sort-asc fa-sm'></i></a></th>
+																		<th><a href="<?= site_url("gallery_youtube/sub_gallery/$gallery/$p/1") ?>">Judul <i class='fa fa-sort-asc fa-sm'></i></a></th>
 																	<?php elseif ($o == 1) : ?>
-																		<th><a href="<?= site_url("gallery_youtube/sub_gallery/$gallery/$p/2") ?>">Nama Gambar <i class='fa fa-sort-desc fa-sm'></i></a></th>
+																		<th><a href="<?= site_url("gallery_youtube/sub_gallery/$gallery/$p/2") ?>">Judul <i class='fa fa-sort-desc fa-sm'></i></a></th>
 																	<?php else : ?>
-																		<th><a href="<?= site_url("gallery_youtube/sub_gallery/$gallery/$p/1") ?>">Nama Gambar <i class='fa fa-sort fa-sm'></i></a></th>
+																		<th><a href="<?= site_url("gallery_youtube/sub_gallery/$gallery/$p/1") ?>">Judul <i class='fa fa-sort fa-sm'></i></a></th>
 																	<?php endif; ?>
 																	<th width=20%>Deskripsi</th>
 																	<?php if ($o == 4) : ?>
@@ -100,7 +110,6 @@
 																		<td><?= $data['no'] ?></td>
 																		<td class="padat">
 																			<iframe height="160px" width="250px" class="embed-responsive-item" src="https://www.youtube.com/embed/<?= $data["link"]; ?>" title="<?= $data['nama'] ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></br>
-																			<?= $data['nama'] ?>
 																		</td>
 																		<td>
 																			<strong><?= $data['nama'] ?><strong>
@@ -121,7 +130,7 @@
 																				<?php elseif ($data['enabled'] == '1') : ?>
 																					<a href="<?= site_url("gallery_youtube/gallery_unlock/" . $data['id'] . "/$gallery") ?>" class="btn bg-navy btn-box btn-sm" title="Non Aktifkan Gambar"><i class="fa fa-unlock"></i></a>
 																				<?php endif ?>
-																				<a href="#" data-href="<?= site_url("gallery_youtube/delete_sub_gallery/$gallery/$data[id]") ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash-o"></i></a>
+																				<a href="#" data-href="<?= site_url("gallery_youtube/delete_sub_gallery/$gallery/$data[id]") ?>" class="btn bg-maroon btn-box btn-sm" title="Hapus" data-toggle="modal" data-target="#confirm-delete"><i class="fa fa-trash"></i></a>
 																			<?php endif; ?>
 																		</td>
 																	</tr>
@@ -132,50 +141,54 @@
 												</div>
 											</div>
 										</form>
-										<div class="row">
-											<div class="col-sm-6">
-												<div class="dataTables_length">
-													<form id="paging" action="<?= site_url("gallery_youtube/sub_gallery/$gallery") ?>" method="post" class="form-horizontal">
-														<label>
-															Tampilkan
-															<select name="per_page" class="form-control input-sm" onchange="$('#paging').submit()">
-																<option value="20" <?php selected($per_page, 20); ?>>20</option>
-																<option value="50" <?php selected($per_page, 50); ?>>50</option>
-																<option value="100" <?php selected($per_page, 100); ?>>100</option>
-															</select>
-															Dari
-															<strong><?= $paging->num_rows ?></strong>
-															Total Data
-														</label>
-													</form>
-												</div>
-											</div>
-											<div class="col-sm-6">
-												<div class="dataTables_paginate paging_simple_numbers">
-													<ul class="pagination">
-														<?php if ($paging->start_link) : ?>
-															<li><a href="<?= site_url("gallery_youtube/sub_gallery/$gallery/$paging->start_link/$o") ?>" aria-label="First"><span aria-hidden="true">Awal</span></a></li>
-														<?php endif; ?>
-														<?php if ($paging->prev) : ?>
-															<li><a href="<?= site_url("gallery_youtube/sub_gallery/$gallery/$paging->prev/$o") ?>" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-														<?php endif; ?>
-														<?php for ($i = $paging->start_link; $i <= $paging->end_link; $i++) : ?>
-															<li <?= jecho($p, $i, "class='active'") ?>><a href="<?= site_url("gallery_youtube/sub_gallery/$gallery/$i/$o") ?>"><?= $i ?></a></li>
-														<?php endfor; ?>
-														<?php if ($paging->next) : ?>
-															<li><a href="<?= site_url("gallery_youtube/sub_gallery/$gallery/$paging->next/$o") ?>" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
-														<?php endif; ?>
-														<?php if ($paging->end_link) : ?>
-															<li><a href="<?= site_url("gallery_youtube/sub_gallery/$gallery/$paging->end_link/$o") ?>" aria-label="Last"><span aria-hidden="true">Akhir</span></a></li>
-														<?php endif; ?>
-													</ul>
-												</div>
-											</div>
-										</div>
 									</div>
 								</div>
 							</div>
 						</div>
+						<div class="card-footer clearfix">
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="dataTables_length">
+										<form id="paging" action="<?= site_url("gallery_youtube/sub_gallery/$gallery") ?>" method="post" class="form-horizontal">
+											<label>
+												<div class="row">
+													<div class="col-sm-4">
+														<select name="per_page" class="form-control input-sm" onchange="$('#paging').submit()">
+															<option value="20" <?php selected($per_page, 20); ?>>20</option>
+															<option value="50" <?php selected($per_page, 50); ?>>50</option>
+															<option value="100" <?php selected($per_page, 100); ?>>100</option>
+														</select>
+													</div>
+													<div class="col-sm-8">
+														Dari&nbsp;<strong><?= $paging->num_rows ?></strong>&nbsp;Total Data
+													</div>
+												</div>
+											</label>
+										</form>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<ul class="pagination pagination-sm m-0 float-right">
+										<?php if ($paging->start_link) : ?>
+											<li class="page-item"><a class="page-link" href="<?= site_url("gallery_youtube/sub_gallery/$gallery/$paging->start_link/$o") ?>" aria-label="First"><span aria-hidden="true">Awal</span></a></li>
+										<?php endif; ?>
+										<?php if ($paging->prev) : ?>
+											<li class="page-item"><a class="page-link" href="<?= site_url("gallery_youtube/sub_gallery/$gallery/$paging->prev/$o") ?>" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+										<?php endif; ?>
+										<?php for ($i = $paging->start_link; $i <= $paging->end_link; $i++) : ?>
+											<li <?= jecho($p, $i, "class='page-item active'") ?>><a class="page-link" href="<?= site_url("gallery_youtube/sub_gallery/$gallery/$i/$o") ?>"><?= $i ?></a></li>
+										<?php endfor; ?>
+										<?php if ($paging->next) : ?>
+											<li class="page-item"><a class="page-link" href="<?= site_url("gallery_youtube/sub_gallery/$gallery/$paging->next/$o") ?>" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+										<?php endif; ?>
+										<?php if ($paging->end_link) : ?>
+											<li class="page-item"><a class="page-link" href="<?= site_url("gallery_youtube/sub_gallery/$gallery/$paging->end_link/$o") ?>" aria-label="Last"><span aria-hidden="true">Akhir</span></a></li>
+										<?php endif; ?>
+									</ul>
+								</div>
+							</div>
+						</div>
+
 					</div>
 				</div>
 			</div>

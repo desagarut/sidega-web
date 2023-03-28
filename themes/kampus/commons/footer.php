@@ -13,8 +13,8 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i><?= $desa['alamat_instansi']; ?></p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><?= $desa['telepon_instansi']; ?></p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i><?= $desa['email_instansi']; ?></p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><?= $desa['telepon_website']; ?></p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i><?= $desa['email_website']; ?></p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>

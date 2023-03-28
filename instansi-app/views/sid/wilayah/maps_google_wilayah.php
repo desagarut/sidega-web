@@ -1,5 +1,6 @@
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-<script src="https://cdn.jsdelivr.net/gh/somanchiu/Keyless-Google-Maps-API@v5.7/mapsJavaScriptAPI.js" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOKTzsvtw8j-TJI8dmJ228bXASq4C-S7U&callback=initMap&v=weekly" defer></script>
 <script>
   $(document).ready(function() {
     $('#simpan_wilayah').click(function() {
@@ -198,7 +199,7 @@
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="<?= site_url() ?>beranda">Beranda</a></li>
-            <li class="breadcrumb-item active"><a href="<?= site_url() ?>identitas_instansi">Identitas Instansi</a></li>
+            <li class="breadcrumb-item active"><a href="<?= site_url() ?>profil_website">Identitas Instansi</a></li>
             <li class="breadcrumb-item active"><a href="#!">Peta wilayah kerja</a></li>
           </ol>
         </div>

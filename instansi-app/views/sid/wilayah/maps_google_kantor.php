@@ -1,4 +1,6 @@
-<script src="https://cdn.jsdelivr.net/gh/somanchiu/Keyless-Google-Maps-API@v5.7/mapsJavaScriptAPI.js" async defer></script>
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOKTzsvtw8j-TJI8dmJ228bXASq4C-S7U&callback=initMap&v=weekly" defer></script>
 
 <script>
   <?php if (!empty($wil_ini['lat'] && !empty($wil_ini['lng']))) : ?>
@@ -117,7 +119,7 @@
 
             <div class="card-footer">
               <div class="row col-sm-5">
-                <a href="<?= site_url('identitas_instansi') ?>" class="btn btn-box bg-purple btn-sm" title="Kembali"><i class="fa fa-backward"></i> Kembali</a>
+                <a href="<?= site_url('profil_website') ?>" class="btn btn-box bg-purple btn-sm" title="Kembali"><i class="fa fa-backward"></i> Kembali</a>
                 <?php if ($this->CI->cek_hak_akses('h')) : ?>
                   <a href="#" class="btn btn-box btn-success btn-sm" download="SIDeGa_Lokasi_Wilayah_<?php echo ucwords($desa['nama_desa']) ?>.gpx" id="exportGPX"><i class='fa fa-download'></i> Export ke GPX</a>
                   <button type="reset" class="btn btn-box btn-danger btn-sm"><i class='fa fa-sign-out'></i> Tutup</button>

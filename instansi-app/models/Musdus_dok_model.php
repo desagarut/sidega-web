@@ -99,7 +99,7 @@ class Musdus_dok_model extends CI_Model
 		{
 			$_SESSION['error_msg'] .= " -> Jenis file ini tidak diperbolehkan ";
 			$_SESSION['success'] = -1;
-			redirect('identitas_instansi');
+			redirect('profil_website');
 		}
 
 		$uploadData = NULL;

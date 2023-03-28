@@ -12,13 +12,13 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h4 class="m-0">Identitas Kampus</h4>
+          <h4 class="m-0">Profil Website</h4>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="<?= site_url() ?>beranda">Beranda</a></li>
 
-            <li class="breadcrumb-item active"><a href="#!">Identitas Kampus</a></li>
+            <li class="breadcrumb-item active"><a href="#!">Profil Website</a></li>
           </ol>
         </div>
       </div>
@@ -35,7 +35,7 @@
   <!-- [ Main Content ] start -->
   <div class="row">
     <div class="col-xl-12 col-md-12">
-      <?php $this->load->view('identitas_instansi/peta.php'); ?>
+      <?php // $this->load->view('profil_website/peta.php'); ?>
 
       <div class="card">
 
@@ -46,13 +46,13 @@
             <div class="col-md-12">
               <div class="pull-right">
                 <?php if ($this->CI->cek_hak_akses('h')) : ?>
-                  <a href="<?= site_url('identitas_instansi/form'); ?>" class="btn btn-warning" title="Ubah Data"><i class="fa fa-edit"></i> Ubah Data</a>
-                  <!--<a href="<?= site_url('identitas_instansi/maps/kantor'); ?>" class="btn btn-box bg-purple btn-sm "><i class='fa fa-map-marker'></i> Lokasi Kantor <?= $kecamatan; ?></a>-->
-                  <a href="<?= site_url('identitas_instansi/maps/kantor'); ?>" class="btn btn-success " title="Ubah Lokasi Kantor"><i class="feather mr-2 icon-map-pin"></i> Lokasi Kantor
+                  <a href="<?= site_url('profil_website/form'); ?>" class="btn btn-warning" title="Ubah Data"><i class="fa fa-edit"></i> Ubah Data</a>
+                  <!--<a href="<?= site_url('profil_website/maps/kantor'); ?>" class="btn btn-box bg-purple btn-sm "><i class='fa fa-map-marker'></i> Lokasi Kantor <?= $kecamatan; ?></a>-->
+                  <a href="<?= site_url('profil_website/maps/kantor'); ?>" class="btn btn-success " title="Ubah Lokasi Kantor"><i class="feather mr-2 icon-map-pin"></i> Lokasi Kantor
                   </a>
-                  <!--<a href="<?= site_url('identitas_instansi/maps/wilayah'); ?>" class="btn btn-box btn-info btn-sm btn-sm "><i class='fa fa-map'></i> Peta Wilayah <?= $kecamatan; ?></a>-->
-                  <a href="<?= site_url('identitas_instansi/maps/wilayah'); ?>" class="btn btn-primary" title="Ubah Wilayah Desa"><i class="feather mr-2 icon-map"></i> Wilayah </a>
-                  <!--<a href="<?= site_url('identitas_instansi/maps_openstreet/wilayah'); ?>" class="btn btn-secondary" title="Ubah Wilayah Desa"><i class='feather mr-2 icon-map'></i> Wilayah Desa | OSM</a>-->
+                  <!--<a href="<?= site_url('profil_website/maps/wilayah'); ?>" class="btn btn-box btn-info btn-sm btn-sm "><i class='fa fa-map'></i> Peta Wilayah <?= $kecamatan; ?></a>-->
+                  <a href="<?= site_url('profil_website/maps/wilayah'); ?>" class="btn btn-primary" title="Ubah Wilayah Desa"><i class="feather mr-2 icon-map"></i> Wilayah </a>
+                  <!--<a href="<?= site_url('profil_website/maps_openstreet/wilayah'); ?>" class="btn btn-secondary" title="Ubah Wilayah Desa"><i class='feather mr-2 icon-map'></i> Wilayah Desa | OSM</a>-->
                 <?php endif; ?>
               </div>
             </div>
@@ -65,18 +65,18 @@
                 <tbody>
                   <tr>
                     <th colspan="3" style="background-color:#606BFD; color:#fff"><strong>
-                        IDENTITAS PERGURUAN TINGGI
+                        IDENTITAS
                       </strong></th>
                   </tr>
                   <tr>
-                    <td width="300">Nama PT</td>
+                    <td width="300">Nama Website</td>
                     <td width="1">:</td>
-                    <td><?= $main['nama_instansi']; ?></td>
+                    <td><?= $main['nama_website']; ?></td>
                   </tr>
                   <tr>
-                    <td>Kode PT</td>
+                    <td>Kode Website</td>
                     <td>:</td>
-                    <td><?= kode_wilayah($main['kode_instansi']); ?></td>
+                    <td><?= kode_wilayah($main['kode_website']); ?></td>
                   </tr>
                   <tr>
                     <td>Kode Pos</td>
@@ -89,7 +89,7 @@
                     <td><?= $main['nama_pimpinan']; ?></td>
                   </tr>
                   <tr>
-                    <td>NIK/NIP Pimpinan</td>
+                    <td>NIK Pimpinan</td>
                     <td>:</td>
                     <td><?= $main['nip_pimpinan']; ?></td>
                   </tr>
@@ -101,17 +101,17 @@
                   <tr>
                     <td>E-Mail</td>
                     <td>:</td>
-                    <td><?= $main['email_instansi']; ?></td>
+                    <td><?= $main['email_website']; ?></td>
                   </tr>
                   <tr>
                     <td>Telepon</td>
                     <td>:</td>
-                    <td><?= $main['telepon_instansi']; ?></td>
+                    <td><?= $main['telepon_website']; ?></td>
                   </tr>
                   <tr>
                     <td>Website</td>
                     <td>:</td>
-                    <td><?= $main['website_instansi']; ?></td>
+                    <td><?= $main['website']; ?></td>
                   </tr>
                   <tr>
                     <th colspan="3" style="background-color:#606BFD; color:#fff"><strong>
