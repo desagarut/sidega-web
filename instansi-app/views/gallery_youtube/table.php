@@ -163,7 +163,7 @@
 															</select>
 														</div>
 														<div class="col-sm-7">
-															Dari&nbsp;<strong><?= $paging->num_rows ?></strong>&nbsp;Total Data
+														Total Data: <strong><?= $paging->num_rows ?></strong>
 														</div>
 													</div>
 												</label>
