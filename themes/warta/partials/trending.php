@@ -5,14 +5,14 @@
                     <!-- section Tittle -->
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="section-tittle mb-30">
+                            <div class="section-tittle mb-30 d-flex dot-style wow fadeInUp" data-wow-delay="0.2s">
                                 <h3>Trending News</h3>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <div class="recent-active dot-style d-flex dot-style">
+                            <div class="recent-active dot-style d-flex wow fadeInUp" data-wow-delay="0.2s">
                                 <!-- Single -->
                                 <div class="single-recent">
                                     <div class="what-img">
@@ -24,9 +24,7 @@
                                                         ations</a></h4>
                                             </a></h4>
                                         <P>Jun 19, 2020</P>
-                                        <a class="popup-video btn-icon"
-                                            href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><span
-                                                class="flaticon-play-button"></span></a>
+                                        <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><span class="flaticon-play-button"></span></a>
 
                                     </div>
                                 </div>
@@ -39,8 +37,7 @@
                                         <h4><a href="latest_news.html">What to Expect From the 2020 Oscar Nomin
                                                 ations</a></h4>
                                         <P>Jun 19, 2020</P>
-                                        <a class="popup-video" href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><span
-                                                class="flaticon-play-button"></span></a>
+                                        <a class="popup-video" href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><span class="flaticon-play-button"></span></a>
                                     </div>
                                 </div>
                                 <!-- Single -->
@@ -54,8 +51,7 @@
                                                         ations</a></h4>
                                             </a></h4>
                                         <P>Jun 19, 2020</P>
-                                        <a class="popup-video" href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><span
-                                                class="flaticon-play-button"></span></a>
+                                        <a class="popup-video" href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><span class="flaticon-play-button"></span></a>
                                     </div>
                                 </div>
                                 <!-- Single -->
@@ -67,8 +63,7 @@
                                         <h4><a href="latest_news.html">What to Expect From the 2020 Oscar Nomin
                                                 ations</a></h4>
                                         <P>Jun 19, 2020</P>
-                                        <a class="popup-video" href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><span
-                                                class="flaticon-play-button"></span></a>
+                                        <a class="popup-video" href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><span class="flaticon-play-button"></span></a>
                                     </div>
                                 </div>
                             </div>

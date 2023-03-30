@@ -1,3 +1,5 @@
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
 <div class="header-bottom header-sticky">
     <div class="container">
         <div class="row align-items-center">
