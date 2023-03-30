@@ -15,7 +15,7 @@
                                     <div class="footer-pera">
                                         <p class="info1"><?= $desa['profil_singkat']; ?></p>
                                         <p class="info2">Email: <?= $desa['email_website']; ?></p>
-                                        <p class="info2">Phone: <?= $desa['telepon_website']; ?></p>
+                                        
                                     </div>
                                 </div>
                             </div>
