@@ -8,7 +8,7 @@
                                 <!-- Slider -->
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <div class="weekly3-news-active dot-style d-flex">
+                                        <div class="weekly3-news-active dot-style d-flex  wow fadeInUp" data-wow-delay="0.2s">
                                             <div class="weekly3-single">
                                                 <div class="weekly3-img">
                                                     <img src="<?= base_url("$this->theme_folder/$this->theme/assets/img/gallery/weekly2News1.png") ?>" alt="">

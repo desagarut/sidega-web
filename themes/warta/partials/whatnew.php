@@ -7,7 +7,7 @@
             <div class="col-lg-8">
                 <div class="whats-news-wrapper">
                     <!-- Heading & Nav Button -->
-                    <div class="row justify-content-between align-items-end mb-15">
+                    <div class="row justify-content-between align-items-end mb-15  d-flex wow fadeInUp" data-wow-delay="0.2s">
                         <div class="col-xl-4">
                             <div class="section-tittle mb-30">
                                 <h3>Yang Baru</h3>
@@ -32,7 +32,7 @@
                     <div class="row">
                         <div class="col-12">
                             <!-- Nav Card -->
-                            <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-content  d-flex wow fadeInUp" data-wow-delay="0.2s" id="nav-tabContent">
                                 <!-- card one -->
                                 <?php foreach (array('terkini' => 'arsip_terkini', 'populer' => 'arsip_populer', 'acak' => 'arsip_acak') as $jenis => $jenis_arsip) : ?>
 

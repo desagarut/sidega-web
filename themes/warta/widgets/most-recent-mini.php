@@ -1,5 +1,5 @@
                 <!-- Most Recent Area -->
-                <div class="most-recent-area">
+                <div class="most-recent-area wow fadeInUp" data-wow-delay="0.2s">
                     <!-- Section Tittle -->
                     <div class="small-tittle mb-20">
                         <h4>Most Recent</h4>

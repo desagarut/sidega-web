@@ -16,7 +16,7 @@
 
                                 <div class="single-slider">
                                     <div class="trending-top mb-30">
-                                        <div class="trend-top-img">
+                                        <div class="trend-top-img d-flex wow fadeIn" data-wow-delay="0.2s">
                                             <img src="<?php echo base_url() . $slider_gambar['lokasi'] . 'kecil_' . $gambar['gambar'] ?>" alt="<?= $gambar['judul'] ?>">
                                             <div class="trend-top-cap">
                                                 <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms"><?= $gambar['id_kategori'] ?></span>

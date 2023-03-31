@@ -158,6 +158,7 @@
                   </div>
                </div>
             </div>
+            <!--
             <div class="blog-author">
                <div class="media align-items-center">
                   <img src="assets/img/blog/author.png" alt="">
@@ -280,7 +281,7 @@
                      <button type="submit" class="button button-contactForm btn_1 boxed-btn">Send Message</button>
                   </div>
                </form>
-            </div>
+            </div>-->
          </div>
          <div class="col-lg-4">
             <?php $this->load->view($folder_themes . '/partials/artikel-side') ?>

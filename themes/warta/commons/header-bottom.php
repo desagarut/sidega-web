@@ -12,7 +12,7 @@
                 <div class="main-menu d-none d-md-block">
                     <nav>
                         <ul id="navigation">
-                            <!--<li><a href="<?= site_url('first') ?>">Home</a></li>-->
+                            <li><a href="<?= site_url('first') ?>">Home</a></li>
                             <?php if (menu_atas) : ?>
                                 <?php foreach ($menu_atas as $menu) : ?>
                                     <li><a href="<?= $menu['link'] ?>"><?= $menu['nama'] ?></a>

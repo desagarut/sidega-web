@@ -4,13 +4,13 @@
                 <div class="weekly2-wrapper">
                     <div class="row">
                         <!-- Banner -->
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
                             <div class="home-banner2 d-none d-lg-block">
                                 <img src="<?= base_url("$this->theme_folder/$this->theme/assets/img/gallery/body_card2.png") ?>" alt="">
                             </div>
                         </div>
                         <div class="col-lg-9">
-                            <div class="slider-wrapper">
+                            <div class="slider-wrapper wow fadeInUp" data-wow-delay="0.2s">
                                 <!-- section Tittle -->
                                 <div class="row">
                                     <div class="col-lg-12">
@@ -23,7 +23,7 @@
                                 <div class="row">
                                     <div class="col-lg-12">
 
-                                        <div class="weekly2-news-active d-flex ">
+                                        <div class="weekly2-news-active">
                                             <?php foreach (array('terkini' => 'arsip_terkini', 'populer' => 'arsip_populer', 'acak' => 'arsip_acak') as $jenis => $jenis_arsip) : ?>
                                                 <!-- Single -->
                                                 <?php foreach ($$jenis_arsip as $arsip) : ?>

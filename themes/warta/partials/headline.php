@@ -6,10 +6,10 @@
   base_url($this->theme_folder . '/' . $this->theme . '/assets/images/placeholder.png') ?>
 
 <div class="whats-news-single mb-40 mb-40">
-  <div class="whates-img">
+  <div class="whates-img wow fadeInUp" data-wow-delay="0.2s">
     <img src="<?= $image ?>">
   </div>
-  <div class="whates-caption">
+  <div class="whates-caption wow fadeInUp" data-wow-delay="0.2s">
     <h4><a href="<?= $url; ?>"><?= $headline['judul'] ?></a></h4>
 
     <?= $abstract ?>
