@@ -12,7 +12,6 @@ class Menu extends Admin_Controller {
 		$this->load->model('referensi_model');
 		$this->load->model('kelompok_model');
 		$this->load->model('laporan_penduduk_model');
-		$this->load->model('keuangan_model');
 		$this->modul_ini = 13;
 		$this->sub_modul_ini = 49;
 	}
@@ -60,7 +59,6 @@ class Menu extends Admin_Controller {
 		$data['statistik_program_bantuan'] = $this->program_bantuan_model->list_program(0);
 		$data['kelompok'] = $this->kelompok_model->list_data();
 		$data['statis_lainnya'] = $this->referensi_model->list_ref(STAT_LAINNYA);
-		$data['artikel_keuangan'] = $this->keuangan_model->artikel_statis_keuangan();
 
 		if ($id)
 		{
@@ -101,7 +99,6 @@ class Menu extends Admin_Controller {
 		$data['statistik_program_bantuan'] = $this->program_bantuan_model->list_program(0);
 		$data['kelompok'] = $this->kelompok_model->list_data();
 		$data['statis_lainnya'] = $this->referensi_model->list_ref(STAT_LAINNYA);
-		$data['artikel_keuangan'] = $this->keuangan_model->artikel_statis_keuangan();
 
 		if ($id)
 		{
