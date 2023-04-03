@@ -122,7 +122,7 @@
                      <div class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
                         <div class="thumb">
                            <a href="#">
-                              <img class="img-fluid" src="assets/img/post/preview.png" alt="">
+                              <!--<img class="img-fluid" src="<?= base_url("$this->theme_folder/$this->theme/assets/img/post/preview.png") ?>" alt="">-->
                            </a>
                         </div>
                         <div class="arrow">
@@ -151,7 +151,7 @@
                         </div>
                         <div class="thumb">
                            <a href="#">
-                              <img class="img-fluid" src="assets/img/post/next.png" alt="">
+                              <!--<img class="img-fluid" src="<?= base_url("$this->theme_folder/$this->theme/assets/img/post/next.png") ?>" alt="">-->
                            </a>
                         </div>
                      </div>
