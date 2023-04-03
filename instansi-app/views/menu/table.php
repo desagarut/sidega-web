@@ -71,7 +71,7 @@
                                                     <div class="col-sm-12">
                                                         <div class="table-responsive">
                                                             <table class="table table-bordered table-striped dataTable table-hover">
-                                                                <thead class="disabled color-palette">
+                                                                <thead>
                                                                     <tr>
                                                                         <th><input type="checkbox" id="checkall" /></th>
                                                                         <th>No</th>
@@ -96,8 +96,10 @@
                                                                                 <a href="<?= site_url("menu/urut/$tip/$data[id]/2") ?>" class="btn bg-olive btn-box btn-sm" title="Pindah Posisi Ke Atas"><i class="fa fa-arrow-up"></i></a>
                                                                                 <a href="<?= site_url("menu/sub_menu/$tip/$data[id]") ?>" class="btn bg-purple btn-box btn-sm" title="Sub Menu"><i class="fa fa-bars"></i></a>
                                                                                 <a href="<?= site_url("menu/form/$tip/$data[id]") ?>" class="btn btn-warning btn-box btn-sm" title="Ubah"><i class="fa fa-edit"></i></a>
+
                                                                                 <?php if ($data['enabled'] == '2') : ?>
                                                                                     <a href="<?= site_url("menu/menu_lock/$tip/" . $data['id']) ?>" class="btn bg-navy btn-box btn-sm" title="Aktifkan"><i class="fa fa-lock">&nbsp;</i></a>
+                                                                                    <br />
                                                                                 <?php elseif ($data['enabled'] == '1') : ?>
                                                                                     <a href="<?= site_url("menu/menu_unlock/$tip/" . $data['id']) ?>" class="btn bg-navy btn-box btn-sm" title="Non Aktifkan"><i class="fa fa-unlock"></i></a>
                                                                                     <a href="<?= site_url("menu/ajax_add_sub_menu/$tip/$data[id]") ?>" class="btn bg-olive btn-box btn-sm" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Tambah Sub Menu" title="Tambah Sub Menu"><i class="fa fa-plus"></i></a>
