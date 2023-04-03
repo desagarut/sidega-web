@@ -77,11 +77,11 @@
                                                                         <th>No</th>
                                                                         <th>Aksi</th>
                                                                         <?php if ($o == 2) : ?>
-                                                                            <th><a href="<?= site_url("menu/index/$tip/$p/1") ?>">Nama Menu<i class='fa fa-sort-asc fa-sm'></i></a></th>
+                                                                            <th nowrap><a href="<?= site_url("menu/index/$tip/$p/1") ?>">Nama Menu <i class='fa fa-sort-asc fa-sm'></i></a></th>
                                                                         <?php elseif ($o == 1) : ?>
-                                                                            <th><a href="<?= site_url("menu/index/$tip/$p/2") ?>">Nama Menu<i class='fa fa-sort-desc fa-sm'></i></a></th>
+                                                                            <th nowrap><a href="<?= site_url("menu/index/$tip/$p/2") ?>">Nama Menu <i class='fa fa-sort-desc fa-sm'></i></a></th>
                                                                         <?php else : ?>
-                                                                            <th><a href="<?= site_url("menu/index/$tip/$p/1") ?>">Nama Menu<i class='fa fa-sort fa-sm'></i></a></th>
+                                                                            <th nowrap><a href="<?= site_url("menu/index/$tip/$p/1") ?>">Nama Menu <i class='fa fa-sort fa-sm'></i></a></th>
                                                                         <?php endif; ?>
                                                                         <th>Link</th>
                                                                     </tr>
