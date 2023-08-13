@@ -55,6 +55,8 @@
         const BASE_URL = '<?= base_url() ?>';
     </script>
 
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1823410826720847" crossorigin="anonymous"></script>
+
     <!-- CSS here -->
     <link rel="stylesheet" href="<?= base_url("$this->theme_folder/$this->theme/assets/css/bootstrap.min.css") ?>">
     <link rel="stylesheet" href="<?= base_url("$this->theme_folder/$this->theme/assets/css/owl.carousel.min.css") ?>">
