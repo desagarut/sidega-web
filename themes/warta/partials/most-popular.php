@@ -6,7 +6,11 @@
                         <!-- Banner -->
                         <div class="col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
                             <div class="home-banner2 d-none d-lg-block">
-                                <img src="<?= base_url("$this->theme_folder/$this->theme/assets/img/gallery/body_card2.png") ?>" alt="">
+                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1823410826720847" crossorigin="anonymous"></script>
+                                <ins class="adsbygoogle" style="display:inline-block;width:263px;height:353px" data-ad-client="ca-pub-1823410826720847" data-ad-slot="9093530690"></ins>
+                                <script>
+                                    (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
                             </div>
                         </div>
                         <div class="col-lg-9">

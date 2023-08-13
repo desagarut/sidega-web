@@ -9,13 +9,13 @@
                             <div class="single-footer-caption mb-30">
                                 <!-- logo -->
                                 <div class="footer-logo">
-                                <h1 style="color: white; font-family:'Segoe UI', Tahoma"><a href="<?= site_url('') ?>"><img src="<?= logo_web($desa['logo']) ?>" style="width:50px" alt="<?= $this->setting->website_title ?>">&nbsp;<?= $this->setting->website_title ?></a></h1>
+                                    <h1 style="color: white; font-family:'Segoe UI', Tahoma"><a href="<?= site_url('') ?>"><img src="<?= logo_web($desa['logo']) ?>" style="width:50px" alt="<?= $this->setting->website_title ?>">&nbsp;<?= $this->setting->website_title ?></a></h1>
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
                                         <p class="info1"><?= $desa['profil_singkat']; ?></p>
                                         <p class="info2">Email: <?= $desa['email_website']; ?></p>
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -61,7 +61,11 @@
                     <div class="col-xl-3 col-lg-3 col-md-5 col-sm-7">
                         <div class="single-footer-caption mb-50">
                             <div class="banner">
-                                <img src="<?= base_url("$this->theme_folder/$this->theme/assets/img/gallery/body_card4.png") ?>" alt="">
+                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1823410826720847" crossorigin="anonymous"></script>
+                                <ins class="adsbygoogle" style="display:inline-block;width:263px;height:353px" data-ad-client="ca-pub-1823410826720847" data-ad-slot="9093530690"></ins>
+                                <script>
+                                    (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
                             </div>
                         </div>
                     </div>
@@ -79,7 +83,7 @@
                                     Copyright &copy;<script>
                                         document.write(new Date().getFullYear());
                                     </script> | <?= $this->setting->website_title ?>
-                                    </p>
+                                </p>
                             </div>
                         </div>
                     </div>
