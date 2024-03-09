@@ -13,6 +13,6 @@
 <?php //$this->load->view($folder_themes . '/partials/most-popular') 
 ?>
 
-<?php $this->load->view($folder_themes . '/partials/video') ?>
+<?php $this->load->view($folder_themes . '/partials/gallery/video') ?>
 <?php $this->load->view($folder_themes . '/partials/weekly') ?>
 <?php $this->load->view($folder_themes . '/widgets/banner-one') ?>

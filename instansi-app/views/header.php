@@ -58,15 +58,6 @@
 	<link rel="stylesheet" href="<?= base_url() ?>assets/css/leaflet.groupedlayercontrol.min.css" />
 	<link rel="stylesheet" href="<?= base_url() ?>assets/css/peta.css">
 
-	<!-- Untuk ubahan style desa -->
-	<!--<?php //if (is_file("desa/css/insidega.css")) : 
-		?>
-		<link type='text/css' href="<? //= base_url() 
-									?>desa/css/insidega.css" rel='Stylesheet' />
-	<?php //endif; 
-	?>-->
-	<!-- Diperlukan untuk script jquery khusus halaman -->
-
 	<!-- OpenStreetMap Js-->
 	<script src="<?= base_url() ?>assets/js/leaflet.js"></script>
 	<script src="<?= base_url() ?>assets/js/turf.min.js"></script>
@@ -108,12 +99,12 @@
 	<?php require __DIR__ . '/head_tags.php' ?>
 </head>
 
-<body class="hold-transition <?= $this->setting->warna_tema_admin; ?> sidebar-mini layout-fixed <?php if ($minsidebar == 1) : ?>sidebar-collapse<?php endif ?> layout-navbar-fixed">
+<body class="hold-transition dark sidebar-mini layout-fixed <?php if ($minsidebar == 1) : ?> sidebar-collapse <?php endif ?> layout-navbar-fixed">
 	<div class="wrapper">
 		<div class="preloader flex-column justify-content-center align-items-center"> <img class="animation__shake" src="<?= base_url() ?>assets/files/logo/neosidega.fw.png" alt="<?= $this->setting->website_title ?>" height="80" width="80"> </div>
 
 		<!-- Navbar -->
-		<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+		<nav class="main-header navbar navbar-expand navbar-dark navbar-dark">
 			<!-- Left navbar links -->
 			<ul class="navbar-nav">
 				<li class="nav-item"> <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a> </li>
@@ -169,7 +160,6 @@
 		</nav>
 		<!-- /.navbar -->
 
-		<!--		<code>$(document).ajaxStart(function() { Pace.restart(); });</code>-->
 		<input id="success-code" type="hidden" value="<?= $_SESSION['success'] ?>">
 		<!-- Untuk menampilkan modal bootstrap umum -->
 		<div class="modal fade" id="modalBox" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -177,7 +167,7 @@
 				<div class='modal-content'>
 					<div class='modal-header'>
 						<h4 class='modal-title' id='myModalLabel'> Pengaturan Pengguna</h4>
-                        <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
+						<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
 					</div>
 					<div class="fetched-data"></div>
 				</div>

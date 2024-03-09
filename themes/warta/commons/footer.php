@@ -24,48 +24,16 @@
                     <div class="col-xl-4 col-lg-4 col-md-5 col-sm-7">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
-                                <h4>Popular post</h4>
+                                <h4>Statistik Pengunjung</h4>
                             </div>
-                            <!-- Popular post -->
-                            <div class="whats-right-single mb-20">
-                                <div class="whats-right-img">
-                                    <img src="<?= base_url("$this->theme_folder/$this->theme/assets/img/gallery/footer_post1.png") ?>" alt="">
-                                </div>
-                                <div class="whats-right-cap">
-                                    <h4><a href="latest_news.html">Scarlett’s disappointment at latest accolade</a></h4>
-                                    <p>Jhon | 2 hours ago</p>
-                                </div>
-                            </div>
-                            <!-- Popular post -->
-                            <div class="whats-right-single mb-20">
-                                <div class="whats-right-img">
-                                    <img src="<?= base_url("$this->theme_folder/$this->theme/assets/img/gallery/footer_post2.png") ?>" alt="">
-                                </div>
-                                <div class="whats-right-cap">
-                                    <h4><a href="latest_news.html">Scarlett’s disappointment at latest accolade</a></h4>
-                                    <p>Jhon | 2 hours ago</p>
-                                </div>
-                            </div>
-                            <!-- Popular post -->
-                            <div class="whats-right-single mb-20">
-                                <div class="whats-right-img">
-                                    <img src="<?= base_url("$this->theme_folder/$this->theme/assets/img/gallery/footer_post3.png") ?>" alt="">
-                                </div>
-                                <div class="whats-right-cap">
-                                    <h4><a href="latest_news.html">Scarlett’s disappointment at latest accolade</a></h4>
-                                    <p>Jhon | 2 hours ago</p>
-                                </div>
-                            </div>
+                            <!-- Statistik Pengunjung -->
+                            <?php $this->load->view($folder_themes . '/widgets/statistik_pengunjung') ?>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-3 col-md-5 col-sm-7">
                         <div class="single-footer-caption mb-50">
                             <div class="banner">
-                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1823410826720847" crossorigin="anonymous"></script>
-                                <ins class="adsbygoogle" style="display:inline-block;width:263px;height:353px" data-ad-client="ca-pub-1823410826720847" data-ad-slot="9093530690"></ins>
-                                <script>
-                                    (adsbygoogle = window.adsbygoogle || []).push({});
-                                </script>
+                                <!-- Masukan Skrip Iklan Disini -->
                             </div>
                         </div>
                     </div>

@@ -3,7 +3,7 @@
 <?php if (count($slider_gambar) > 0) : ?>
 
     <!-- Trending Area Start -->
-    <div class="trending-area fix pt-25 gray-bg">
+    <div class="trending-area fix pt-25 white-bg">
         <div class="container">
             <div class="trending-main">
                 <div class="row">

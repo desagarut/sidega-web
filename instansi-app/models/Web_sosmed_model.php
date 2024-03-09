@@ -83,7 +83,7 @@ class Web_sosmed_model extends CI_Model {
 				break;
 
 			case ($id == 4) :
-				$link = 'https://www.youtube.com/channel/' . $link;
+				$link = 'https://www.youtube.com/' . $link;
 				break;
 
 			case ($id == 5) :
@@ -99,7 +99,7 @@ class Web_sosmed_model extends CI_Model {
 				break;
 
 			case ($id == 7 && $tipe == 1) :
-				$link = 'https://t.me/' . $link;
+				$link = 'https://t.me/+' . $link;
 				break;
 
 			case ($id == 7 && $tipe == 2) :

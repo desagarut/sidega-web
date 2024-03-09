@@ -4,7 +4,7 @@
 <!--================ Artikel Front List Start =================-->
 <?php if ($artikel) : ?>
 
-	<div class="about-area2 gray-bg pt-60 pb-60">
+	<div class="about-area2 white-bg pt-60 pb-60">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">

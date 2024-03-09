@@ -1,7 +1,7 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
 <!-- Whats New Start -->
-<section class="whats-news-area pt-50 pb-20 gray-bg">
+<section class="whats-news-area pt-50 pb-20 white-bg">
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
@@ -21,7 +21,7 @@
                                         <a class="nav-item nav-link active" id="nav-terkini-tab" data-toggle="tab" href="#terkini" role="tab" aria-controls="nav-terkini" aria-selected="true">Terkini</a>
                                         <a class="nav-item nav-link" id="nav-populer-tab" data-toggle="tab" href="#populer" role="tab" aria-controls="nav-populer" aria-selected="false">Populer</a>
                                         <a class="nav-item nav-link" id="nav-acak-tab" data-toggle="tab" href="#acak" role="tab" aria-controls="nav-acak" aria-selected="false">Random</a>
-                                        <a class="nav-item nav-link" href="<?= site_url('arsip') ?>" role="tab" >Selengkapnya</a>
+                                        <a class="nav-item nav-link" href="<?= site_url('arsip') ?>" role="tab">Selengkapnya</a>
                                     </div>
                                 </nav>
                                 <!--End Nav Button  -->
@@ -57,7 +57,7 @@
                                                                     <?php endif ?>
                                                                 </div>
                                                                 <div class="whats-right-cap">
-                                                                <a href="<?= site_url('artikel/' . buat_slug($arsip)) ?>"><span class="colorb"><?= $arsip['judul'] ?></span></a>
+                                                                    <a href="<?= site_url('artikel/' . buat_slug($arsip)) ?>"><span class="colorb"><?= $arsip['judul'] ?></span></a>
                                                                     <h4><a href="<?= site_url('artikel/' . buat_slug($arsip)) ?>"><?= potong_teks($arsip['isi'], 50); ?></a></h4>
                                                                     <p><?= tgl_indo($arsip['tgl_upload']); ?> - <?= $arsip['hit'] ?></p>
                                                                 </div>

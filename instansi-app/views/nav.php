@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
 
-<aside class="main-sidebar sidebar-light-maroon elevation-4">
+<aside class="main-sidebar sidebar-dark-maroon elevation-4">
   <!-- Brand Logo -->
   <a href="<?= site_url() ?>first" target="_blank" class="brand-link">
     <img src="<?= logo_web($desa['logo']); ?>" alt="Logo <?= $this->setting->website_title ?>" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -59,10 +59,10 @@
                 </ul>
               </li>
 
-
             <?php endif; ?>
           <?php endif; ?>
         <?php endforeach; ?>
       </ul>
     </nav>
+  </div>
 </aside>
