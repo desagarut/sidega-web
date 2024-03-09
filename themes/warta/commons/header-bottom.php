@@ -26,7 +26,6 @@
                                     </li>
                                 <?php endforeach ?>
                             <?php endif ?>
-                            <!--<li><a href="<?= site_url('mandiri_web') ?>">Login</a></li>-->
                         </ul>
                     </nav>
                 </div>
