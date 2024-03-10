@@ -1,13 +1,13 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
-<?php $abstract = potong_teks($headline['isi'], 150); ?>
+<?php $abstract = potong_teks($headline['isi'], 200); ?>
 <?php $url = site_url('artikel/' . buat_slug($headline)); ?>
-<?php $image = ($headline['gambar'] && is_file(LOKASI_FOTO_ARTIKEL . 'kecil_' . $headline['gambar'])) ?
-  AmbilFotoArtikel($headline['gambar'], 'kecil') :
+<?php $image = ($headline['gambar'] && is_file(LOKASI_FOTO_ARTIKEL . 'sedang_' . $headline['gambar'])) ?
+  AmbilFotoArtikel($headline['gambar'], 'sedang') :
   base_url($this->theme_folder . '/' . $this->theme . '/assets/images/placeholder.png') ?>
 
 <div class="whats-news-single mb-40 mb-40">
   <div class="whates-img wow fadeInUp" data-wow-delay="0.2s">
-    <img src="<?= $image ?>">
+    <img src="<?= $image ?>" alt="<?= $headline['judul'] ?>" style="width:100%">
   </div>
   <div class="whates-caption wow fadeInUp" data-wow-delay="0.2s">
     <h4><a href="<?= $url; ?>"><?= $headline['judul'] ?></a></h4>
