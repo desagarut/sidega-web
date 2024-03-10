@@ -1,19 +1,19 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
 <!-- Whats New Start -->
-<section class="whats-news-area pt-50 pb-20 white-bg">
+<section class="whats-news-area pt-40 pb-40 white-bg">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-12">
                 <div class="whats-news-wrapper">
                     <!-- Heading & Nav Button -->
                     <div class="row justify-content-between align-items-end mb-15  d-flex wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="col-xl-4">
+                        <div class="col-xl-8">
                             <div class="section-tittle mb-30">
-                                <h3>Yang Baru</h3>
+                                <h4>Yang Baru</h4>
                             </div>
                         </div>
-                        <div class="col-xl-8 col-md-9">
+                        <div class="col-xl-4 col-md-4">
                             <div class="properties__button">
                                 <!--Nav Button  -->
                                 <nav>
@@ -21,7 +21,7 @@
                                         <a class="nav-item nav-link active" id="nav-terkini-tab" data-toggle="tab" href="#terkini" role="tab" aria-controls="nav-terkini" aria-selected="true">Terkini</a>
                                         <a class="nav-item nav-link" id="nav-populer-tab" data-toggle="tab" href="#populer" role="tab" aria-controls="nav-populer" aria-selected="false">Populer</a>
                                         <a class="nav-item nav-link" id="nav-acak-tab" data-toggle="tab" href="#acak" role="tab" aria-controls="nav-acak" aria-selected="false">Random</a>
-                                        <a class="nav-item nav-link" href="<?= site_url('arsip') ?>" role="tab">Selengkapnya</a>
+                                        <a class="nav-item nav-link" href="<?= site_url('arsip') ?>" role="tab">Semua Artikel</a>
                                     </div>
                                 </nav>
                                 <!--End Nav Button  -->
@@ -39,11 +39,11 @@
                                     <div class="tab-pane fade show <?php ($jenis == 'terkini') and print('active') ?>" id="<?= $jenis ?>" role="tabpanel" aria-labelledby="nav-terkini-tab">
                                         <div class="row">
                                             <!-- Left Details Caption -->
-                                            <div class="col-xl-6 col-lg-12">
+                                            <div class="col-xl-8 col-lg-12">
                                                 <?php $this->load->view($folder_themes . '/partials/headline') ?>
                                             </div>
                                             <!-- Right single caption -->
-                                            <div class="col-xl-6 col-lg-12">
+                                            <div class="col-xl-4 col-lg-12">
                                                 <div class="row">
                                                     <!-- single -->
                                                     <?php foreach ($$jenis_arsip as $arsip) : ?>
@@ -53,12 +53,12 @@
                                                                     <?php if ($arsip['gambar']) : ?>
                                                                         <a href="<?= site_url('artikel/' . buat_slug($arsip)) ?>"><img src="<?= base_url(LOKASI_FOTO_ARTIKEL . 'kecil_' . $arsip['gambar']) ?>" alt="<?= $arsip['judul'] ?>" style="width: 90px; height: 90px;"></a>
                                                                     <?php else : ?>
-                                                                        <a href="<?= site_url('artikel/' . buat_slug($arsip)) ?>"><img src="<?= base_url("$this->theme_folder/$this->theme/assets/img/blog/blog_4.png") ?>" alt="<?= $arsip['judul'] ?>" style="width: 90px; height: 90px;"></a>
+                                                                        <a href="<?= site_url('artikel/' . buat_slug($arsip)) ?>"><img src="<?= base_url("$this->theme_folder/$this->theme/assets/img/noimange.png") ?>" alt="<?= $arsip['judul'] ?>" style="width: 90px; height: 90px;"></a>
                                                                     <?php endif ?>
                                                                 </div>
                                                                 <div class="whats-right-cap">
-                                                                    <a href="<?= site_url('artikel/' . buat_slug($arsip)) ?>"><span class="colorb"><?= $arsip['judul'] ?></span></a>
-                                                                    <h4><a href="<?= site_url('artikel/' . buat_slug($arsip)) ?>"><?= potong_teks($arsip['isi'], 50); ?></a></h4>
+                                                                    <h4><a href="<?= site_url('artikel/' . buat_slug($arsip)) ?>"><?= $arsip['judul'] ?></a></h4>
+                                                                    <h6><a href="<?= site_url('artikel/' . buat_slug($arsip)) ?>"><?= potong_teks($arsip['isi'], 50); ?></a></h6>
                                                                     <p><?= tgl_indo($arsip['tgl_upload']); ?> - <?= $arsip['hit'] ?></p>
                                                                 </div>
                                                             </div>
@@ -75,10 +75,6 @@
                     </div>
                 </div>
                 <?php $this->load->view($folder_themes . '/widgets/banner1') ?>
-            </div>
-            <div class="col-lg-4">
-                <?php $this->load->view($folder_themes . '/widgets/flow-social') ?>
-                <?php $this->load->view($folder_themes . '/widgets/most-recent-mini') ?>
             </div>
         </div>
     </div>

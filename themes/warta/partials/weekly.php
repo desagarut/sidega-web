@@ -1,5 +1,5 @@
 <!--   Weekly3-News start -->
-<div class="weekly3-news-area pt-30 pb-30">
+<div class="weekly3-news-area pt-40 pb-40">
     <div class="container">
         <div class="weekly3-wrapper">
             <div class="row">
