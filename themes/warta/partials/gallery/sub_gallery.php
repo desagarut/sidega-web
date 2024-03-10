@@ -1,38 +1,32 @@
-<?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
-
-<div class="owl-carousel header-carousel position-relative">
-  <?php if ($gallery) : ?>
-    <?php foreach ($gallery as $album) : ?>
-      <?php if (is_file(LOKASI_GALERI . "sedang_" . $album['gambar'])) : ?>
-        <?php $link = AmbilGaleri($album['gambar'], 'sedang') ?>
-        <div class="col-md-12 text-center wow fadeInUp testimonial-item" data-wow-delay="0.1s">
-          <div class="team-item bg-light">
-            <div class="overflow-hidden" style="padding: 10px 10px 10px 10px">
-              <img src="<?= AmbilGaleri($album['gambar'], 'sedang') ?>" class="img-fluid" alt="<?= $album['nama'] ?>" style="width:100%; max-height: 400px; object-fit: cover">
-            </div>
-            <div class="position-relative d-flex justify-content-center" style="margin-top: -70px;">
-              <h5><a class="bg-light mx-1"><?= strtoupper($album['nama']) ?></a></h5>
-            </div>
-          </div>
-        </div>
-      <?php endif ?>
-    <?php endforeach ?>
-  <?php else : ?>
-    <div class="error-area">
-      <div class="d-table">
-        <div class="d-table-cell">
-          <div class="container">
-            <div class="error-content">
-              <h1 style="color:brown">404</h1>
-              <h2>Oops! Foto Tidak Ada!</h2>
-              <p>Halaman yang dituju tidak ada, mungkin sudah dihapus atau dialihkan</p>
-              <div class="button">
-                <a class="btn btn-warning py-3 px-5 mt-2" style="border-radius: 30px 0 0 30px;" href="<?= site_url('') ?>">Back to Home</a>
+<!-- ======= Gallery Foto ======= -->
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+      <h4 class="mb-5 text-left">Sub Gallery Foto Kegiatan
+        <a href="<?= site_url("first/gallery_youtube/{$data['id']}") ?>" class="btn btn-card btn-danger btn-sm" style="border-radius: 8px 8px 8px 8px;">YOUTUBE</a> |
+        <a href="<?= site_url("first/cctv/{$data['id']}") ?>" class="btn btn-card btn-warning btn-sm" style="border-radius: 8px 8px 8px 8px;">CCTV</a> |
+        <a href="<?= site_url("first/gallery/{$data['id']}") ?>" class="btn btn-card btn-primary btn-sm" style="border-radius: 8px 8px 8px 8px;">FOTO</a>
+      </h4>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <?php foreach ($gallery as $data) : ?>
+        <?php if (is_file(LOKASI_GALERI . "sedang_" . $data['gambar'])) : ?>
+          <div class="col-md-4 text-center wow fadeInUp testimonial-item text-center" data-wow-delay="0.1s" style="width:100%%; padding:0px 40px 0px 40px">
+            <div class="team-item bg-light">
+              <div class="overflow-hidden">
+                <a href="<?= site_url("first/sub_gallery/{$data['id']}") ?>">
+                  <img src="<?= AmbilGaleri($data['gambar'], 'sedang') ?>" alt="<?= $article['judul'] ?>" style="object-fit: cover; width:100%; height:250px;">
+                </a>
+              </div>
+              <div class="text-center p-4">
+                <a href="<?= site_url("first/sub_gallery/{$data['id']}") ?>">
+                  <h6 class="mb-0"> <?= strtoupper($data['nama']) ?></h6>
+                </a>
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        <?php endif; ?>
+      <?php endforeach; ?>
     </div>
-  <?php endif; ?>
+  </div>
 </div>

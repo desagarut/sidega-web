@@ -7,9 +7,9 @@
   ?>
   <?php $this->load->view($folder_themes . '/commons/header.php') ?>
 
-  <?php $this->load->view($folder_themes . '/partials/gallery/gallery') ?>
+  <?php $this->load->view($folder_themes . '/partials/gallery/sub_gallery') ?>
 
-<?php $this->load->view($folder_themes . '/commons/footer') ?>
+  <?php $this->load->view($folder_themes . '/commons/footer') ?>
 
 </body>
 

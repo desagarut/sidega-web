@@ -1,11 +1,11 @@
 <!-- ======= Gallery Foto ======= -->
-<div class="container-xxl py-0">
+<div class="container-xxl py-5">
   <div class="container">
     <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-      <h4 class="mb-5 text-start">Gallery
-        <a href="<?= site_url("first/gallery_youtube/{$data['id']}") ?>" class="flex-shrink-0 btn btn-sm btn-light px-3" style="border-radius: 8px 8px 8px 8px;">YOUTUBE</a> |
-        <a href="<?= site_url("first/cctv/{$data['id']}") ?>" class="flex-shrink-0 btn btn-sm btn-light px-3" style="border-radius: 8px 8px 8px 8px;">CCTV</a> |
-        <a href="<?= site_url("first/gallery/{$data['id']}") ?>" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 8px 8px 8px 8px;">FOTO</a>
+      <h4 class="mb-5 text-left">Gallery Foto Kegiatan
+        <a href="<?= site_url("first/gallery_youtube/{$data['id']}") ?>" class="btn btn-card btn-danger btn-sm" style="border-radius: 8px 8px 8px 8px;">YOUTUBE</a> |
+        <a href="<?= site_url("first/cctv/{$data['id']}") ?>" class="btn btn-card btn-warning btn-sm" style="border-radius: 8px 8px 8px 8px;">CCTV</a> |
+        <a href="<?= site_url("first/gallery/{$data['id']}") ?>" class="btn btn-card btn-primary btn-sm" style="border-radius: 8px 8px 8px 8px;">FOTO</a>
       </h4>
     </div>
     <div class="row g-4 justify-content-center">
