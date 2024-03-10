@@ -14,14 +14,10 @@
           <div class="col-md-4 text-center wow fadeInUp testimonial-item text-center" data-wow-delay="0.1s" style="width:100%%; padding:0px 40px 0px 40px">
             <div class="team-item bg-light">
               <div class="overflow-hidden">
-                <a href="<?= site_url("first/sub_gallery/{$data['id']}") ?>">
-                  <img src="<?= AmbilGaleri($data['gambar'], 'sedang') ?>" alt="<?= $article['judul'] ?>" style="object-fit: cover; width:100%; height:250px;">
-                </a>
+                <img src="<?= AmbilGaleri($data['gambar'], 'sedang') ?>" alt="<?= $article['judul'] ?>" style="object-fit: cover; width:100%; height:250px;">
               </div>
               <div class="text-center p-4">
-                <a href="<?= site_url("first/sub_gallery/{$data['id']}") ?>">
-                  <h6 class="mb-0"> <?= strtoupper($data['nama']) ?></h6>
-                </a>
+                <h6 class="mb-0"> <?= strtoupper($data['nama']) ?></h6>
               </div>
             </div>
           </div>
