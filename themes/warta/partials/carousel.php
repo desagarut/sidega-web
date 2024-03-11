@@ -8,9 +8,7 @@
             <div class="trending-main">
                 <div class="row">
                     <div class="col-lg-8">
-                        <!-- Trending Top -->
                         <div class="slider-active">
-                            <!-- Single -->
                             <?php foreach ($slider_gambar['gambar'] as $gambar) : ?>
                                 <?php $file_gambar = $slider_gambar['lokasi'] . 'sedang_' . $gambar['gambar']; ?>
                                 <?php if (is_file($file_gambar)) : ?>
