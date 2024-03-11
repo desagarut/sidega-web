@@ -18,8 +18,8 @@
                                     <li><a href="<?= $menu['link'] ?>"><?= $menu['nama'] ?></a>
                                         <?php if (count($menu['submenu']) > 0) : ?>
                                             <ul class="submenu">
-                                            <?php foreach ($menu['submenu'] as $submenu) : ?>
-                                                <li><a href="<?= $submenu['link'] ?>"><?= $submenu['nama'] ?></a></li>
+                                                <?php foreach ($menu['submenu'] as $submenu) : ?>
+                                                    <li><a href="<?= $submenu['link'] ?>"><?= $submenu['nama'] ?></a></li>
                                                 <?php endforeach ?>
                                             </ul>
                                         <?php endif ?>
@@ -31,13 +31,13 @@
                 </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-4">
-                <div class="header-right f-right d-none d-lg-block">
-                <?php $this->load->view($folder_themes . '/widgets/social_media') ?>
+                <div class="header-right f-right d-lg-block">
+                    <?php $this->load->view($folder_themes . '/widgets/social_media') ?>
 
-                    <!-- Search Nav -->
+                    <!-- Search Nav 
                     <div class="nav-search search-switch">
                         <i class="fa fa-search"></i>
-                    </div>
+                    </div>-->
                 </div>
             </div>
             <!-- Mobile Menu -->
