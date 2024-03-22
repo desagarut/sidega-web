@@ -54,7 +54,7 @@ class Config_model extends CI_Model {
 		$data['alamat_instansi'] = alamat($post['alamat_instansi']);
 		$data['email_website'] = email($post['email_website']);
 		$data['telepon_website'] = bilangan($post['telepon_website']);
-		$data['website_instansi'] = alamat_web($post['website_instansi']);
+		$data['url_website'] = alamat_web($post['url_website']);
 		$data['nama_website'] = nama_terbatas($post['nama_website']);
 		$data['kode_website'] = bilangan($post['kode_website']);
 		$data['nama_pimpinan'] = nama($post['nama_pimpinan']);

@@ -27,7 +27,7 @@
 			<li>
 				<a href="<?= site_url("artikel/kategori/$data[slug]"); ?>" class="d-flex">
 					<p><?= $data['kategori']; ?><?php (count($data['submenu']) > 0) and print('<span class="caret"></span>'); ?></p>
-					<p>(37)</p>
+					<p></p>
 				</a>
 			</li>
 		<?php endforeach; ?>
