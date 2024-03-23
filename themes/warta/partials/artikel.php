@@ -98,7 +98,11 @@
                   </p>
                   <div class="quote-wrapper">
                      <div class="quotes">
-                        <?= $article['judul'] ?>
+                        Judul: <?= $article['judul'] ?><br/>
+                        <?php if ($article['dokumen']) : ?>
+                           <strong>Download Lampiran :</strong><br/>
+                           <a href="<?= base_url(LOKASI_DOKUMEN . $article['dokumen']) ?>" class="btn btn-sm btn-box "> <i class="fa fa-download"></i> <span><?= $article['link_dokumen'] ?></span> </a>
+                        <?php endif ?>
                      </div>
                   </div>
                </div>
@@ -133,7 +137,7 @@
                         <div class="detials">
                            <p>Prev Post</p>
                            <a href="#">
-                              <h4>Space The Final Frontier</h4>
+                              <h4><?= $article['id'] - 1?></h4>
                            </a>
                         </div>
                      </div>
@@ -141,7 +145,7 @@
                         <div class="detials">
                            <p>Next Post</p>
                            <a href="#">
-                              <h4>Telescopes 101</h4>
+                           <h4><?= $article['id'] + 1?></h4>
                            </a>
                         </div>
                         <div class="arrow">

@@ -12,14 +12,13 @@
                                     <?php foreach ($sinergi_program as $key => $program) : ?>
                                         <?php $baris[$program['baris']][$program['kolom']] = $program; ?>
 
-
                                         <?php foreach ($baris as $baris_program) : ?>
                                             <?php $width = 100 / count($baris_program) - count($baris_program) ?>
                                             <?php foreach ($baris_program as $key => $program) : ?>
 
                                                 <div class="weekly3-single">
                                                     <a href=" <?= $program['tautan'] ?>">
-                                                        <div class="weekly3-img">
+                                                        <div class="weekly3-img" style="max-width:100%; max-height:auto">
                                                             <?php if ($program['gambar']) : ?>
                                                                 <img src="<?= base_url() . LOKASI_GAMBAR_WIDGET . $program['gambar'] ?>" alt="<?= $program['judul'] ?>">
                                                             <?php else : ?>

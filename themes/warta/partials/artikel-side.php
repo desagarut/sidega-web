@@ -1,39 +1,11 @@
 <div class="blog_right_sidebar">
     <?php $this->load->view($folder_themes . '/widgets/side_artikel_list') ?>
-    <?php $this->load->view($folder_themes . '/widgets/side_newsletter_widget') ?>
-    <?php $this->load->view($folder_themes . '/widgets/side_search_widget') ?>
+    <?php //$this->load->view($folder_themes . '/widgets/side_newsletter_widget') ?>
+    <?php //$this->load->view($folder_themes . '/widgets/side_search_widget') ?>
     <?php $this->load->view($folder_themes . '/widgets/category') ?>
-    <?php $this->load->view($folder_themes . '/widgets/side_popular_post_widget') ?>
-
-    <aside class="single_sidebar_widget tag_cloud_widget">
-        <h4 class="widget_title">Tag Clouds</h4>
-        <ul class="list">
-            <li>
-                <a href="#">project</a>
-            </li>
-            <li>
-                <a href="#">love</a>
-            </li>
-            <li>
-                <a href="#">technology</a>
-            </li>
-            <li>
-                <a href="#">travel</a>
-            </li>
-            <li>
-                <a href="#">restaurant</a>
-            </li>
-            <li>
-                <a href="#">life style</a>
-            </li>
-            <li>
-                <a href="#">design</a>
-            </li>
-            <li>
-                <a href="#">illustration</a>
-            </li>
-        </ul>
-    </aside>
+    <?php //$this->load->view($folder_themes . '/widgets/side_popular_post_widget') ?>
+    <?php $this->load->view($folder_themes . '/widgets/tag') ?>
+    
 
     <!--
 <div class="row shadow" style="padding: 10px 10px 10px 10px">
