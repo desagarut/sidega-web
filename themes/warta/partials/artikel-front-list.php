@@ -51,8 +51,8 @@
 										</div>
 									</div>
 								</div>
+								<?php $this->load->view($folder_themes . '/commons/paging') ?>
 							</div>
-							<?php $this->load->view($folder_themes . '/commons/paging') ?>
 						</div>
 					</div>
 				</div>
