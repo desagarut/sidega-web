@@ -14,11 +14,11 @@
                                 <?php if (is_file($file_gambar)) : ?>
                                     <div class="single-slider">
                                         <div class="trending-top mb-30">
-                                            <div class="trend-top-img d-flex wow fadeIn" data-wow-delay="0.2s">
+                                            <div class="trend-top-img d-flex wow fadeIn" data-wow-delay="0.2s" style="width: 100%; max-height: 520px; display: block;">
                                                 <?php if ($slider_gambar['gambar']) : ?>
-                                                    <a href="<?= site_url('artikel/' . buat_slug($gambar)) ?>"><img src="<?php echo base_url() . $slider_gambar['lokasi'] . 'sedang_' . $gambar['gambar'] ?>" alt="<?= $gambar['judul'] ?>" style="width: 100%;"></a>
+                                                    <a href="<?= site_url('artikel/' . buat_slug($gambar)) ?>"><img src="<?php echo base_url() . $slider_gambar['lokasi'] . 'sedang_' . $gambar['gambar'] ?>" alt="<?= $gambar['judul'] ?>" ></a>
                                                 <?php else : ?>
-                                                    <a href="<?= site_url('artikel/' . buat_slug($gambar)) ?>"><img src="<?= base_url("$this->theme_folder/$this->theme/assets/img/noimage.png") ?>" alt="<?= $gambar['judul'] ?>" style="width: 100%;"></a>
+                                                    <a href="<?= site_url('artikel/' . buat_slug($gambar)) ?>"><img src="<?= base_url("$this->theme_folder/$this->theme/assets/img/noimage.png") ?>" alt="<?= $gambar['judul'] ?>"></a>
                                                 <?php endif ?>
                                                 <div class="trend-top-cap">
                                                     <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms"><?= $gambar['id_kategori'] ?></span>
