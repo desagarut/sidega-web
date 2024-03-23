@@ -16,9 +16,9 @@
                                         <div class="trending-top mb-30">
                                             <div class="trend-top-img d-flex wow fadeIn" data-wow-delay="0.2s">
                                                 <?php if ($slider_gambar['gambar']) : ?>
-                                                    <a href="<?= site_url('artikel/' . buat_slug($gambar)) ?>"><img src="<?php echo base_url() . $slider_gambar['lokasi'] . 'sedang_' . $gambar['gambar'] ?>" alt="<?= $gambar['judul'] ?>" style="width: 100%; height: 620px;"></a>
+                                                    <a href="<?= site_url('artikel/' . buat_slug($gambar)) ?>"><img src="<?php echo base_url() . $slider_gambar['lokasi'] . 'sedang_' . $gambar['gambar'] ?>" alt="<?= $gambar['judul'] ?>" style="width: 100%;"></a>
                                                 <?php else : ?>
-                                                    <a href="<?= site_url('artikel/' . buat_slug($gambar)) ?>"><img src="<?= base_url("$this->theme_folder/$this->theme/assets/img/noimage.png") ?>" alt="<?= $gambar['judul'] ?>" style="width: 100%; height: 620px;"></a>
+                                                    <a href="<?= site_url('artikel/' . buat_slug($gambar)) ?>"><img src="<?= base_url("$this->theme_folder/$this->theme/assets/img/noimage.png") ?>" alt="<?= $gambar['judul'] ?>" style="width: 100%;"></a>
                                                 <?php endif ?>
                                                 <div class="trend-top-cap">
                                                     <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms"><?= $gambar['id_kategori'] ?></span>
