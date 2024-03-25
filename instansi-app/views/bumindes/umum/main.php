@@ -30,9 +30,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-3">
-					<div class="card">
-						<?php $this->load->view('bumindes/umum/side') ?>
-					</div>
+					<?php $this->load->view('bumindes/umum/side') ?>
 				</div>
 				<div class="col-md-9">
 					<div class="card">

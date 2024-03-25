@@ -7,56 +7,33 @@
 		});
 	});
 </script>
-<div class="content-wrapper">
 
-	<!-- Content Header (Page header) -->
-	<div class="content-header">
-		<div class="container-fluid">
-			<div class="row mb-2">
-				<div class="col-sm-6">
-					<h4 class="m-0">Pengaturan Surat <?= $detail['nama']; ?></h4>
-				</div>
-				<!-- /.col -->
-				<div class="col-sm-6">
-					<ol class="breadcrumb float-sm-right">
-						<li class="breadcrumb-item"><a href="<?= site_url('beranda') ?>"><i class="fa fa-home"></i> Home</a></li>
-						<li class="breadcrumb-item active">Format Surat Desa</li>
-					</ol>
-				</div>
-				<!-- /.col -->
+<!-- Content Wrapper. Contains page content -->
+<form id="mainform" name="mainform" action="" method="post">
+
+	<div class="card-header">
+		<div class="row">
+			<div class="col-md-12">
+				<a href='<?= site_url("{$this->controller}/form") ?>' title="Tambah Surat Keluar Baru" class="btn btn-box bg-olive btn-sm "><i class="fa fa-plus"></i> Tambah Surat Keluar Baru</a>
+				<a href="#confirm-delete" title="Hapus Data" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform','<?= site_url("{$this->controller}/delete_all/$p/$o") ?>')" class="btn btn-box	btn-danger btn-sm  hapus-terpilih"><i class='fa fa-trash'></i> Hapus Data Terpilih</a>
+				<a href="<?= site_url("{$this->controller}/dialog_cetak/$o") ?>" class="btn btn-box btn-secondary btn-sm " title="Cetak Agenda Surat Keluar" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Agenda Surat Keluar"><i class="fa fa-print "></i> Cetak</a>
+				<a href="<?= site_url("{$this->controller}/dialog_unduh/$o") ?>" title="Unduh Agenda Surat Keluar" class="btn btn-box btn-secondary btn-sm " title="Unduh Agenda Surat Keluar" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Agenda Surat Keluar"><i class="fa fa-download"></i> Unduh</a>
 			</div>
-			<!-- /.row -->
 		</div>
-		<!-- /.container-fluid -->
-	</div>
-
-	<!-- Content Wrapper. Contains page content -->
-	<form id="mainform" name="mainform" action="" method="post">
-
-		<div class="card-header">
-			<div class="row">
-				<div class="col-md-12">
-					<a href='<?= site_url("{$this->controller}/form") ?>' title="Tambah Surat Keluar Baru" class="btn btn-box bg-olive btn-sm "><i class="fa fa-plus"></i> Tambah Surat Keluar Baru</a>
-					<a href="#confirm-delete" title="Hapus Data" title="Hapus Data Terpilih" onclick="deleteAllBox('mainform','<?= site_url("{$this->controller}/delete_all/$p/$o") ?>')" class="btn btn-box	btn-danger btn-sm  hapus-terpilih"><i class='fa fa-trash'></i> Hapus Data Terpilih</a>
-					<a href="<?= site_url("{$this->controller}/dialog_cetak/$o") ?>" class="btn btn-box btn-secondary btn-sm " title="Cetak Agenda Surat Keluar" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Cetak Agenda Surat Keluar"><i class="fa fa-print "></i> Cetak</a>
-					<a href="<?= site_url("{$this->controller}/dialog_unduh/$o") ?>" title="Unduh Agenda Surat Keluar" class="btn btn-box btn-secondary btn-sm " title="Unduh Agenda Surat Keluar" data-remote="false" data-toggle="modal" data-target="#modalBox" data-title="Unduh Agenda Surat Keluar"><i class="fa fa-download"></i> Unduh</a>
-				</div>
-			</div><br />
-			<div class="row">
-				<div class="col-sm-3">
-					<select class="form-control form-control-sm " name="filter" onchange="formAction('mainform','<?= site_url($this->controller . '/filter') ?>')">
-						<option value="">Tahun</option>
-						<?php foreach ($tahun_surat as $tahun) : ?>
-							<option value="<?= $tahun['tahun'] ?>" <?php selected($filter, $tahun['tahun']) ?>><?= $tahun['tahun'] ?></option>
-						<?php endforeach; ?>
-					</select>
-				</div>
-				<div class="col-sm-3">
-					<div class="input-group input-group-sm pull-right">
-						<input name="cari" id="cari" class="form-control form-control-navbar" placeholder="Cari..." type="search" value="<?= html_escape($cari) ?>" onkeypress="if (event.keyCode == 13){$('#'+'mainform').attr('action', '<?= site_url("{$this->controller}/search") ?>');$('#'+'mainform').submit();}">
-						<div class="input-group-btn">
-							<button type="submit" class="btn btn-sm btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url("{$this->controller}/search") ?>');$('#'+'mainform').submit();"><i class="fa fa-search"></i></button>
-						</div>
+		<div class="row py-2">
+			<div class="col-sm-3">
+				<select class="form-control form-control-sm " name="filter" onchange="formAction('mainform','<?= site_url($this->controller . '/filter') ?>')">
+					<option value="">Tahun</option>
+					<?php foreach ($tahun_surat as $tahun) : ?>
+						<option value="<?= $tahun['tahun'] ?>" <?php selected($filter, $tahun['tahun']) ?>><?= $tahun['tahun'] ?></option>
+					<?php endforeach; ?>
+				</select>
+			</div>
+			<div class="col-sm-3">
+				<div class="input-group input-group-sm pull-right">
+					<input name="cari" id="cari" class="form-control form-control-navbar" placeholder="Cari..." type="search" value="<?= html_escape($cari) ?>" onkeypress="if (event.keyCode == 13){$('#'+'mainform').attr('action', '<?= site_url("{$this->controller}/search") ?>');$('#'+'mainform').submit();}">
+					<div class="input-group-btn">
+						<button type="submit" class="btn btn-sm btn-default" onclick="$('#'+'mainform').attr('action', '<?= site_url("{$this->controller}/search") ?>');$('#'+'mainform').submit();"><i class="fa fa-search"></i></button>
 					</div>
 				</div>
 			</div>
@@ -120,12 +97,9 @@
 					</tbody>
 				</table>
 			</div>
-
 		</div>
-		<div class="card-footer">
-			<div class="row">
-				<div class="col-sm-6">
-					<div class="dataTables_length">
+
+		<!--<div class="dataTables_length">
 						<form id="paging" action="<?= site_url("surat_keluar") ?>" method="post" class="form-horizontal">
 							<label><small>
 									Tampilkan
@@ -139,34 +113,10 @@
 									Total Data</small>
 							</label>
 						</form>
-					</div>
-				</div>
-				<div class="col-sm-6">
+					</div>-->
 
-					<?php $this->load->view('global/paging'); ?>
-					<!--<div class="dataTables_paginate paging_simple_numbers">
-					<ul class="pagination">
-						<?php if ($paging->start_link) : ?>
-							<li><a href="<?= site_url("{$this->controller}/index/$paging->start_link/$o") ?>" aria-label="First"><span aria-hidden="true">Awal</span></a></li>
-						<?php endif; ?>
-						<?php if ($paging->prev) : ?>
-							<li><a href="<?= site_url("{$this->controller}/index/$paging->prev/$o") ?>" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-						<?php endif; ?>
-						<?php for ($i = $paging->start_link; $i <= $paging->end_link; $i++) : ?>
-							<li <?= jecho($p, $i, "class='active'") ?>><a href="<?= site_url("{$this->controller}/index/$i/$o") ?>"><?= $i ?></a></li>
-						<?php endfor; ?>
-						<?php if ($paging->next) : ?>
-							<li><a href="<?= site_url("{$this->controller}/index/$paging->next/$o") ?>" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
-						<?php endif; ?>
-						<?php if ($paging->end_link) : ?>
-							<li><a href="<?= site_url("{$this->controller}/index/$paging->end_link/$o") ?>" aria-label="Last"><span aria-hidden="true">Akhir</span></a></li>
-						<?php endif; ?>
-					</ul>
-				</div>-->
-				</div>
-			</div>
-		</div>
-	</form>
-</div>
+		<?php $this->load->view('global/paging'); ?>
+	</div>
+</form>
 
 <?php $this->load->view('global/confirm_delete'); ?>

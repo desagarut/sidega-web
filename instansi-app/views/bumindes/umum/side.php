@@ -69,14 +69,14 @@
     })
   })
 </script>-->
-
+<div class="card">
 	<div class="card-header">
 		<h3 class="card-title">Menu</h3>
 		<div class="card-tools">
 			<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
 		</div>
 	</div>
-	<div class="card-body no-padding">
+	<div class="card-body">
 		<ul class="nav nav-pills nav-stacked">
       <li class="<?php compared_return($selected_nav, "peraturan", "active"); ?>"><a href="<?= site_url('dokumen_sekretariat/clear/3') ?>">Buku Peraturan</a></li>
       <li class="<?php compared_return($selected_nav, "keputusan", "active"); ?>"><a href="<?= site_url('dokumen_sekretariat/clear/2') ?>">Buku Keputusan</a></li>
@@ -88,6 +88,7 @@
       <li class="<?php compared_return($selected_nav, "agenda", "active"); ?>"><a href="<?= site_url('web/tab/1000') ?>">Agenda Kampus</a></li>
         </ul>
 	</div>
+</div>
 
 
 <?php endif; ?>
