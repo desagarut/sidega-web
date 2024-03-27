@@ -32,17 +32,15 @@
 						<li class="breadcrumb-item"><a href="#!">Adm. Umum</a></li>
 						<li class="breadcrumb-item active"><a href="#!">Dok Informasi Publik</li>
 					</ol>
-				</div><!-- /.col -->
-			</div><!-- /.row -->
-		</div><!-- /.container-fluid -->
+				</div>
+			</div>
+		</div>
 	</div>
-	<!-- /.content-header -->
 
 	<!-- Main content -->
 	<section class="content">
 		<div class="container-fluid">
 			<div class="row">
-
 				<div class="card">
 					<form id="mainform" name="mainform" action="" method="post">
 						<div class="row">
