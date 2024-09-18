@@ -21,13 +21,13 @@ class MY_Controller extends CI_Controller {
 		parent::__construct();
 		$this->load->model('database_model');
 		$this->database_model->cek_migrasi();
-		// Gunakan tema klasik kalau setting tema kosong atau folder di instansi/themes untuk tema pilihan tidak ada
+		// Gunakan tema warta kalau setting tema kosong atau folder di instansi/themes untuk tema pilihan tidak ada
 		// if (empty($this->setting->web_theme) OR !is_dir(FCPATH.'instansi/themes/'.$this->setting->web_theme))
 		$theme = preg_replace("/instansi\//","",strtolower($this->setting->web_theme)) ;
 		$theme_folder = preg_match("/instansi\//", strtolower($this->setting->web_theme)) ? "instansi/themes" : "themes";
 		if (empty($this->setting->web_theme) OR !is_dir(FCPATH.$theme_folder.'/'.$theme))
 		{
-			$this->theme = 'klasik';
+			$this->theme = 'warta';
 			$this->theme_folder = 'themes';
 		}
 		else
@@ -89,7 +89,7 @@ class MY_Controller extends CI_Controller {
 		if (is_file($template_file_path))
 			$this->template = "../../{$this->theme_folder}/{$this->theme}/{$template_file}";
 		else
-			$this->template = '../../themes/klasik/' . $template_file;
+			$this->template = '../../themes/warta/' . $template_file;
 	}
 
 	/*
@@ -119,7 +119,7 @@ class Web_Controller extends MY_Controller {
 	}
 
 	/*
-	 * Jika file theme/view tidak ada, gunakan file klasik/view
+	 * Jika file theme/view tidak ada, gunakan file warta/view
 	 * Supaya tidak semua layout atau partials harus diulangi untuk setiap tema
 	 */
 	public static function fallback_default($theme, $view)
@@ -130,7 +130,7 @@ class Web_Controller extends MY_Controller {
 
 		if (!is_file(APPPATH .'views/'. $theme_view))
 		{
-			$theme_view = "../../themes/klasik/$view";
+			$theme_view = "../../themes/warta/$view";
 		}
 
 		return $theme_view;

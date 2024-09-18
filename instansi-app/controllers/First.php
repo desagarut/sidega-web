@@ -25,7 +25,6 @@ class First extends Web_Controller {
 			}
 		}
 
-		$this->load->model('anjungan_model');
 		$this->load->model('config_model');
 		
 		$this->load->model('first_m');
@@ -50,7 +49,6 @@ class First extends Web_Controller {
 		
 		$this->load->model('referensi_model');
 		$this->load->model('surat_model');
-		$this->load->model('track_model');
 		$this->load->model('teks_berjalan_model');
 		
 		$this->load->model('web_menu_model');
@@ -96,7 +94,6 @@ class First extends Web_Controller {
 		}
 
 		$this->_get_common_data($data);
-		$this->track_model->track_desa('first');
 		$this->load->view($this->template, $data);
 	}
 	
