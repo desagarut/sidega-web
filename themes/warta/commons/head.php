@@ -4,31 +4,31 @@
     <meta charset="utf-8">
     <!--<title>eLEARNING - eLearning HTML Template</title>-->
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="Desa Garut" name="keywords">
+    <meta content="Informasi Seputar Desa Di Kabupaten Garut Provinsi Jawa Barat" name="description">
 
     <?php defined('THEME_VERSION') or define('THEME_VERSION', 'V4.7') ?>
 
-    <?php $kampus_title = trim(ucwords($this->setting->website_title)); ?>
+    <?php $website_title = trim(ucwords($this->setting->website_title)); ?>
 
     <meta content="utf-8" http-equiv="encoding">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name='viewport' content='width=device-width, initial-scale=1' />
     <meta name='google' content='notranslate' />
-    <meta name='theme' content='Potensi Kecamatan umkm' />
+    <meta name='theme' content='Website ' />
     <meta name='designer' content='Bambang Andri H' />
     <meta name='theme:designer' content='Bambang Andri H' />
     <meta name="theme:version" content="<?= THEME_VERSION ?>" />
     <meta name="theme-color" content="#2e8b17" />
     <meta name="keywords" content="sidega, SIDEGA, SIDeGa, sistem informasi desa garut, web, blog, informasi, website, tema sidega-blue, desa garut, kelurahan garut, kecamatan garut, kabupaten garut, Jawa Barat, indonesia" />
-    <meta property="og:site_name" content="<?= $kampus_title ?>" />
+    <meta property="og:site_name" content="<?= $website_title ?>" />
     <meta property="og:type" content="article" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
 
     <?php if (isset($single_artikel)) : ?>
 
-        <title><?= $single_artikel["judul"] . " - $kampus_title" ?></title>
+        <title><?= $single_artikel["judul"] . " - $website_title" ?></title>
 
         <meta name='description' content="<?= str_replace('"', "'", substr(strip_tags($single_artikel['isi']), 0, 400)); ?>" />
         <meta property="og:title" content="<?= $single_artikel["judul"]; ?>" />
@@ -39,10 +39,10 @@
 
     <?php else : ?>
         <title><?php $tmp = ltrim(get_dynamic_title_page_from_path(), ' -');
-                echo (trim($tmp) == '') ? $kampus_title : "$tmp - $kampus_title"; ?></title>
-        <meta name='description' content="<?= $this->setting->website_title . ' ' . $kampus_title; ?>" />
-        <meta property="og:title" content="<?= $kampus_title; ?>" />
-        <meta property='og:description' content="<?= $this->setting->website_title . ' ' . $kampus_title; ?>" />
+                echo (trim($tmp) == '') ? $website_title : "$tmp - $website_title"; ?></title>
+        <meta name='description' content="<?= $this->setting->website_title . ' ' . $website_title; ?>" />
+        <meta property="og:title" content="<?= $website_title; ?>" />
+        <meta property='og:description' content="<?= $this->setting->website_title . ' ' . $website_title; ?>" />
     <?php endif; ?>
 
     <meta property='og:url' content="<?= current_url(); ?>" />

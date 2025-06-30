@@ -199,8 +199,8 @@
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="<?= site_url() ?>beranda">Beranda</a></li>
-            <li class="breadcrumb-item active"><a href="<?= site_url() ?>profil_website">Identitas Instansi</a></li>
-            <li class="breadcrumb-item active"><a href="#!">Peta wilayah kerja</a></li>
+            <li class="breadcrumb-item active"><a href="<?= site_url() ?>profil_website">Identitas Instansi <?= $breadcrumb ?></a></li>
+            <li class="breadcrumb-item active"><a href="#!">Peta wilayah kerja <?= $nama_wilayah ?></a></li>
           </ol>
         </div>
       </div>

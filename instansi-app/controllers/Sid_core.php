@@ -450,20 +450,20 @@ class Sid_Core extends Admin_Controller {
 
 	{
 
-		$sebutan_deskel = ucwords($this->setting->sebutan_deskel);
+		$sebutan_desa = ucwords($this->setting->sebutan_desa);
 		$data['wil_atas'] = $this->config_model->get_data();
 		$data['wil_ini'] = $this->wilayah_model->get_dusun_maps($id);
 		$data['dusun_gis'] = $this->wilayah_model->list_dusun();
 		$data['rw_gis'] = $this->wilayah_model->list_rw_gis();
 		$data['rt_gis'] = $this->wilayah_model->list_rt_gis();
 
-		$data['nama_wilayah'] = ucwords($this->setting->sebutan_wilayah." ".$data['wil_ini']['dusun']." ".$sebutan_deskel." ".$data['wil_atas']['nama_deskel']);
+		$data['nama_wilayah'] = ucwords($this->setting->sebutan_wilayah." ".$data['wil_ini']['dusun']." ".$sebutan_desa." ".$data['wil_atas']['nama_desa']);
 		$data['wilayah'] = ucwords($this->setting->sebutan_wilayah);
 		$data['breadcrumb'] = array(
 			array('link' => site_url('sid_core'), 'judul' => "Daftar ".$data['wilayah']),
 		);
 		$data['form_action'] = site_url("sid_core/update_kantor_dusun_map/$id");
-		$namadesa =  $data['wil_atas']['nama_deskel'];
+		$namadesa =  $data['wil_atas']['nama_desa'];
 		$data['logo'] = $this->config_model->get_data();
 
 		if (!empty($data['wil_atas']['lat'] && !empty($data['wil_atas']['lng'] && !empty($data['wil_atas']['path']))))
@@ -473,7 +473,7 @@ class Sid_Core extends Admin_Controller {
 		else
 		{
 			$_SESSION['success'] = -1;
-			$_SESSION['error_msg'] = "Lokasi Kantor $sebutan_deskel $nama_deskel Belum Dilengkapi";
+			$_SESSION['error_msg'] = "Lokasi Kantor $sebutan_desa $nama_desa Belum Dilengkapi";
 			redirect("sid_core", $data);
 		}
 	}
@@ -508,19 +508,19 @@ class Sid_Core extends Admin_Controller {
 
 	public function ajax_wilayah_dusun_maps_google($id = '')
 	{
-		$sebutan_deskel = ucwords($this->setting->sebutan_deskel);
+		$sebutan_desa = ucwords($this->setting->sebutan_desa);
 		$data['wil_atas'] = $this->config_model->get_data();
 		$data['wil_ini'] = $this->wilayah_model->get_dusun_maps($id);
 		$data['dusun_gis'] = $this->wilayah_model->list_dusun();
 		$data['rw_gis'] = $this->wilayah_model->list_rw_gis();
 		$data['rt_gis'] = $this->wilayah_model->list_rt_gis();
-		$data['nama_wilayah'] = ucwords($this->setting->sebutan_wilayah." ".$data['wil_ini']['dusun']." ".$sebutan_deskel." ".$data['wil_atas']['nama_deskel']);
+		$data['nama_wilayah'] = ucwords($this->setting->sebutan_wilayah." ".$data['wil_ini']['dusun']." ".$sebutan_desa." ".$data['wil_atas']['nama_desa']);
 		$data['wilayah'] = ucwords($this->setting->sebutan_wilayah);
 		$data['breadcrumb'] = array(
 			array('link' => site_url('sid_core'), 'judul' => "Daftar ".$data['wilayah']),
 		);
 		$data['form_action'] = site_url("sid_core/update_wilayah_dusun_map/$id");
-		$nama_deskel =  $data['wil_atas']['nama_deskel'];
+		$nama_desa =  $data['wil_atas']['nama_desa'];
 		$data['logo'] = $this->config_model->get_data();
 		if (!empty($data['wil_atas']['lat'] && !empty($data['wil_atas']['lng'] && !empty($data['wil_atas']['path']))))
 		{
@@ -529,7 +529,7 @@ class Sid_Core extends Admin_Controller {
 		else
 		{
 			$_SESSION['success'] = -1;
-			$_SESSION['error_msg'] = "Peta Lokasi/Wilayah $sebutan_deskel $namadesa Belum Dilengkapi";
+			$_SESSION['error_msg'] = "Peta Lokasi/Wilayah $sebutan_desa $nama_desa Belum Dilengkapi";
 			redirect("sid_core");
 		}
 	}
