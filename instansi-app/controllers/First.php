@@ -55,6 +55,8 @@ class First extends Web_Controller
 
 		//update v 5.5.5
 		$this->load->model('first_gallery_youtube');
+		$this->load->model('first_live_tv');
+
 		$this->load->model('first_cctv_m');
 
 
@@ -84,6 +86,8 @@ class First extends Web_Controller
 
 		$data['gallery'] = $this->first_gallery_youtube->gallery_show($data['paging']->offset, $data['paging']->per_page);
 		$data['cctv'] = $this->first_cctv_m->cctv($data['paging']->offset, $data['paging']->per_page);
+		$data['gallery'] = $this->first_live_tv->live_tv($data['paging']->offset, $data['paging']->per_page);
+
 
 		$cari = trim($this->input->get('cari'));
 		if (! empty($cari)) {
@@ -232,6 +236,45 @@ class First extends Web_Controller
 		$this->load->view($this->template, $data);
 	}
 
+	// Halaman arsip Live_TV
+	public function negara($p = 1)
+	{
+		$data = $this->includes;
+		$data['p'] = $p;
+		$data['paging'] = $this->first_gallery_youtube->paging($p);
+		$data['paging_range'] = 3;
+		$data['start_paging'] = max($data['paging']->start_link, $p - $data['paging_range']);
+		$data['end_paging'] = min($data['paging']->end_link, $p + $data['paging_range']);
+		$data['pages'] = range($data['start_paging'], $data['end_paging']);
+		$data['gallery_youtube'] = $this->first_gallery_youtube->gallery_show($data['paging']->offset, $data['paging']->per_page);
+
+		$this->_get_common_data($data);
+
+		$this->set_template('layouts/live_tv.tpl.php');
+		$this->load->view($this->template, $data);
+	}
+
+	// halaman rincian tiap album galeri
+	public function channel_tv($gal = 0, $p = 1)
+	{
+		$data = $this->includes;
+		$data['p'] = $p;
+		$data['gal'] = $gal;
+		$data['paging'] = $this->first_gallery_youtube->paging2($gal, $p);
+		$data['paging_range'] = 3;
+		$data['start_paging'] = max($data['paging']->start_link, $p - $data['paging_range']);
+		$data['end_paging'] = min($data['paging']->end_link, $p + $data['paging_range']);
+		$data['pages'] = range($data['start_paging'], $data['end_paging']);
+		$data['gallery_youtube'] = $this->first_gallery_youtube->gallery_show($data['paging']->offset, $data['paging']->per_page);
+		$data['gallery'] = $this->first_gallery_youtube->sub_gallery_show($gal, $data['paging']->offset, $data['paging']->per_page);
+		$data['parrent'] = $this->first_gallery_youtube->get_parrent($gal);
+		$data['mode'] = 1;
+
+		$this->_get_common_data($data);
+
+		$this->set_template('layouts/live_tv.tpl.php');
+		$this->load->view($this->template, $data);
+	}
 
 	public function statistik($stat = 0, $tipe = 0)
 	{
