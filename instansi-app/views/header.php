@@ -101,7 +101,7 @@
 
 <body class="hold-transition dark sidebar-mini layout-fixed <?php if ($minsidebar == 1) : ?> sidebar-collapse <?php endif ?> layout-navbar-fixed">
 	<div class="wrapper">
-		<div class="preloader flex-column justify-content-center align-items-center"> <img class="animation__shake" src="<?= base_url() ?>assets/files/logo/neosidega.fw.png" alt="<?= $this->setting->website_title ?>" height="80" width="80"> </div>
+		<!--<div class="preloader flex-column justify-content-center align-items-center"> <img class="animation__shake" src="<? //= base_url() ?>assets/files/logo/neosidega.fw.png" alt="<?= $this->setting->website_title ?>" height="80" width="80"> </div> -->
 
 		<!-- Navbar -->
 		<nav class="main-header navbar navbar-expand navbar-dark navbar-dark">

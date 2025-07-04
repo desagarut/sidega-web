@@ -2,10 +2,11 @@
 <div class="container py-5">
   <div class="text-center">
     <h4 class="mb-5 text-left">Negara Penyedia Live TV
-      <a href="<?= site_url("first/live_tv/{$data['id']}") ?>" class="flex-shrink-0 btn btn-sm btn-danger px-3" style="border-radius: 8px 8px 8px 8px;">LIVE TV</a> |
+      <!--<a href="<?= site_url("first/live_tv/{$data['id']}") ?>" class="flex-shrink-0 btn btn-sm btn-danger px-3" style="border-radius: 8px 8px 8px 8px;">LIVE TV</a> |
       <a href="<?= site_url("first/gallery_youtube/{$data['id']}") ?>" class="flex-shrink-0 btn btn-sm btn-danger px-3" style="border-radius: 8px 8px 8px 8px;">YOUTUBE</a> |
       <a href="<?= site_url("first/cctv/{$data['id']}") ?>" class="flex-shrink-0 btn btn-sm btn-warning px-3" style="border-radius: 8px 8px 8px 8px;">CCTV</a> |
       <a href="<?= site_url("first/gallery/{$data['id']}") ?>" class="flex-shrink-0 btn btn-sm btn-light px-3" style="border-radius: 8px 8px 8px 8px;">FOTO</a>
+-->
     </h4>
   </div>
   <div class="row g-4">
