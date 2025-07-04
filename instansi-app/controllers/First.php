@@ -86,7 +86,7 @@ class First extends Web_Controller
 
 		$data['gallery'] = $this->first_gallery_youtube->gallery_show($data['paging']->offset, $data['paging']->per_page);
 		$data['cctv'] = $this->first_cctv_m->cctv($data['paging']->offset, $data['paging']->per_page);
-		$data['negara'] = $this->first_live_tv->negara($data['paging']->offset, $data['paging']->per_page);
+		$data['live_tv'] = $this->first_live_tv->live_tv($data['paging']->offset, $data['paging']->per_page);
 
 
 		$cari = trim($this->input->get('cari'));
@@ -246,7 +246,7 @@ class First extends Web_Controller
 		$data['start_paging'] = max($data['paging']->start_link, $p - $data['paging_range']);
 		$data['end_paging'] = min($data['paging']->end_link, $p + $data['paging_range']);
 		$data['pages'] = range($data['start_paging'], $data['end_paging']);
-		$data['negara'] = $this->first_live_tv->negara($data['paging']->offset, $data['paging']->per_page);
+		$data['live_tv'] = $this->first_live_tv->live_tv($data['paging']->offset, $data['paging']->per_page);
 
 		$this->_get_common_data($data);
 
@@ -265,7 +265,7 @@ class First extends Web_Controller
 		$data['start_paging'] = max($data['paging']->start_link, $p - $data['paging_range']);
 		$data['end_paging'] = min($data['paging']->end_link, $p + $data['paging_range']);
 		$data['pages'] = range($data['start_paging'], $data['end_paging']);
-		$data['negara'] = $this->first_live_tv->negara($data['paging']->offset, $data['paging']->per_page);
+		$data['live_tv'] = $this->first_live_tv->live_tv($data['paging']->offset, $data['paging']->per_page);
 		$data['channel'] = $this->first_live_tv->channel_tv($gal, $data['paging']->offset, $data['paging']->per_page);
 		$data['parrent'] = $this->first_live_tv->get_parrent($gal);
 		$data['mode'] = 1;

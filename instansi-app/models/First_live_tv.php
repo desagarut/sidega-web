@@ -24,7 +24,7 @@ class First_live_tv extends CI_Model {
 	}
 
 	// daftar album galeri
-	public function negara($offset=0, $limit=50)
+	public function live_tv($offset=0, $limit=50)
 	{
 		// OPTIMIZE: benarkah butuh paging?
 		$paging_sql = ' LIMIT ' .$offset. ',' .$limit;
