@@ -5,12 +5,8 @@
 <?php $this->load->view($folder_themes . '/commons/head') ?>
 
 <body>
-  <?php // $this->load->view($folder_themes . '/commons/spinner.php') 
-  ?>
   <?php $this->load->view($folder_themes . '/commons/header.php') ?>
-
   <?php $this->load->view($folder_themes . '/partials/live_tv/negara') ?>
-
   <?php $this->load->view($folder_themes . '/commons/footer') ?>
 </body>
 

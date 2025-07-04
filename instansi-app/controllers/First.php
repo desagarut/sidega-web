@@ -86,7 +86,7 @@ class First extends Web_Controller
 
 		$data['gallery'] = $this->first_gallery_youtube->gallery_show($data['paging']->offset, $data['paging']->per_page);
 		$data['cctv'] = $this->first_cctv_m->cctv($data['paging']->offset, $data['paging']->per_page);
-		$data['gallery'] = $this->first_live_tv->live_tv($data['paging']->offset, $data['paging']->per_page);
+		$data['negara'] = $this->first_live_tv->negara($data['paging']->offset, $data['paging']->per_page);
 
 
 		$cari = trim($this->input->get('cari'));
@@ -237,16 +237,16 @@ class First extends Web_Controller
 	}
 
 	// Halaman arsip Live_TV
-	public function negara($p = 1)
+	public function live_tv($p = 1)
 	{
 		$data = $this->includes;
 		$data['p'] = $p;
-		$data['paging'] = $this->first_gallery_youtube->paging($p);
+		$data['paging'] = $this->first_live_tv->paging($p);
 		$data['paging_range'] = 3;
 		$data['start_paging'] = max($data['paging']->start_link, $p - $data['paging_range']);
 		$data['end_paging'] = min($data['paging']->end_link, $p + $data['paging_range']);
 		$data['pages'] = range($data['start_paging'], $data['end_paging']);
-		$data['gallery_youtube'] = $this->first_gallery_youtube->gallery_show($data['paging']->offset, $data['paging']->per_page);
+		$data['negara'] = $this->first_live_tv->negara($data['paging']->offset, $data['paging']->per_page);
 
 		$this->_get_common_data($data);
 
@@ -260,19 +260,19 @@ class First extends Web_Controller
 		$data = $this->includes;
 		$data['p'] = $p;
 		$data['gal'] = $gal;
-		$data['paging'] = $this->first_gallery_youtube->paging2($gal, $p);
+		$data['paging'] = $this->first_live_tv->paging2($gal, $p);
 		$data['paging_range'] = 3;
 		$data['start_paging'] = max($data['paging']->start_link, $p - $data['paging_range']);
 		$data['end_paging'] = min($data['paging']->end_link, $p + $data['paging_range']);
 		$data['pages'] = range($data['start_paging'], $data['end_paging']);
-		$data['gallery_youtube'] = $this->first_gallery_youtube->gallery_show($data['paging']->offset, $data['paging']->per_page);
-		$data['gallery'] = $this->first_gallery_youtube->sub_gallery_show($gal, $data['paging']->offset, $data['paging']->per_page);
-		$data['parrent'] = $this->first_gallery_youtube->get_parrent($gal);
+		$data['negara'] = $this->first_live_tv->negara($data['paging']->offset, $data['paging']->per_page);
+		$data['channel'] = $this->first_live_tv->channel_tv($gal, $data['paging']->offset, $data['paging']->per_page);
+		$data['parrent'] = $this->first_live_tv->get_parrent($gal);
 		$data['mode'] = 1;
 
 		$this->_get_common_data($data);
 
-		$this->set_template('layouts/live_tv.tpl.php');
+		$this->set_template('layouts/channel_tv.tpl.php');
 		$this->load->view($this->template, $data);
 	}
 

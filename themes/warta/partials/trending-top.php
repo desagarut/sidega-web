@@ -8,7 +8,7 @@
                         <img src="<?= base_url("$this->theme_folder/$this->theme/assets/img/live_tv.png") ?>" alt="live tv">
                         <div class="trend-top-cap trend-top-cap2">
                             <span class="bgg">Hiburan</span>
-                            <h2><a href="<?= base_url("first/live_tv"); ?>">LIVE TV</a></h2>
+                            <h2><a href="<?= site_url("first/live_tv"); ?>">LIVE TV</a></h2>
                         </div>
                     </div>
                 </div>

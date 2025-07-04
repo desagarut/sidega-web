@@ -9,14 +9,14 @@
   </div>
   <div class="row g-4">
 
-    <?php if ($gallery) : ?>
-      <?php foreach ($gallery as $data) : ?>
+    <?php if ($channel) : ?>
+      <?php foreach ($channel as $data) : ?>
         <?php if ($data['link']) : ?>
-          <div class="col-md-12 shadow" style="padding: 10px 10px 10px 10px;">
+          <div class="col-md-4 shadow" style="padding: 10px 10px 10px 10px;">
             <!-- Start Single Product -->
             <div class="single-product">
               <div class="product-image">
-                <iframe height="350px" width="100%" class="embed-responsive-item" src="https://www.youtube.com/embed/<?= $data["link"]; ?>" title="<?= $data['nama'] ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe height="200px" width="100%" class="embed-responsive-item" src="https://www.youtube.com/embed/<?= $data["link"]; ?>" title="<?= $data['nama'] ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
               <div class="product-info">
                 <h4 class="title"><small><?= "$data[nama]" ?></small></h4>
